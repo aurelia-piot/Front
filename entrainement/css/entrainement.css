@@ -1,0 +1,62 @@
+h2{
+    font-size: 25px; /*taille de la police*/
+    color: rgb(253, 253, 253); /*couleur de la police*/
+    font-family: 'courgette' , cursive;
+    text-align: left;
+    font-weight:400;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+body{
+    background: url('../img/background.png');
+
+}
+
+    
+
+.container1{
+
+    background: rgb(207, 146, 146);
+    height: 50px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    color: white;
+}
+.titre{
+    padding-bottom: 20px;
+    float: left;
+
+}
+.nav{
+    padding-top: 25px;
+    padding-right:10px; 
+    float: right;    
+}
+.nav a {
+    margin-right: 15px;
+}
+
+.container2{
+
+    background: url(/img/rainbow.png);
+    height: 275px;
+    width: 600px;
+    padding: 20px,50px;
+
+    color: rgb(112, 21, 121);
+    margin: 0 auto;
+}
+
+
+.container3{
+
+    background: rgb(255, 255, 255);
+    height: 1000px;
+    width: 1000px;
+
+    color: white;
+    margin: 0 auto;
+}
