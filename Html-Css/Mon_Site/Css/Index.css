@@ -1138,7 +1138,7 @@ td{
 }
 
 
-/**Les Menus**/
+/**Les Menus***************************************/
 
 .les_menus{
    
@@ -1176,4 +1176,227 @@ td{
     background: #4e5661;
     transition: 0.5s ease-in-out; 
 }
+/******************** Menus deroulants***********************/
+/* .les_menus2{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+.les_menus3{
     
+     display: inline-block;
+}
+.les_menus4{
+    float: left;
+    height: 50px;
+    border:1px solid #0c141d;
+    background: #c7d0db;
+  
+    text-align: center;
+    border-radius :7px ; 
+   
+    padding: 10px 20px; 
+    margin-right: 15px;
+    margin-top: 30px; 
+    font-family:  Verdana;
+}
+.les_menus4 a{
+    color: rgb(22, 22, 36);
+    text-decoration:none;
+    font-weight: italic;
+    font-size: 120%;
+    
+    
+}
+.les_menus4 ul{
+    padding: 0px;
+    margin: 0px;
+    
+    
+    
+}
+.les_menus4 li{
+    padding-top: 20px;
+    list-style-type: none;   
+
+    border-bottom: 1px solid black;
+    background: #2980b9;
+    
+    
+}
+.submenus4{
+    
+    display: none; 
+}
+.submenus4 li a{
+    padding:0;
+    font-size:120% ;
+    color:rgb(13, 14, 17) ;
+    width: 100%;
+    height:25px ; 
+    position: absolute;
+     
+}
+.les_menus4:hover .submenus4{
+    display: initial;
+    top: 100%;
+    left:0px;
+    padding: 0px;
+}
+*/
+/*********************Menus deroulants cor*******************/
+/* a mettre en dessous de " lien a:hover...ou pas*/
+#menuDeroulant{
+    height: 650px;
+}
+#menuDeroulant nav{
+    background: transparent;
+    border: none;
+    width: 90%;
+    margin: 0 auto ;
+}
+#menuDeroulant nav ul li{
+    float: left;
+    list-style-type: none;
+    width: 20%;
+}
+#menuDeroulant nav ul ul{ /*on definit les listes qui sont dans les listes*/
+    display: none;/*pour le rendre invisible*/
+    
+}
+#menuDeroulant nav ul li ul li{
+    border-top: 1px solid black;
+    width: 100%;
+}
+#menuDeroulant nav li{
+    background:transparent;
+}
+#menuDeroulant nav li a{
+    text-decoration: none;
+    color:black;
+    padding: 4px 0 4px ;
+    display: block;/*pour qu'ils s'etendent sur toute la longueur de son conteneur*/
+    background: rgb(132, 149, 161);
+}
+#menuDeroulant nav ul.niveau1 li.sousmenu:hover ul.niveau2{
+    display: block;
+}
+/**********FIN LIEN ET MENUS*************************/
+/*****************FORMULAIRE*********************/
+
+.containerFromulaire{
+    margin: 0 auto;
+    width:60% ;
+    /* height: 590px; /*s'adapte auto*/
+    background: rgb(165, 73, 73);
+    padding:  25px;
+    border-radius: 15px;
+    color: white
+
+}
+textarea{
+    margin-top: 10px;
+}
+
+label{
+    margin: 10px 0;
+    
+    width: 50%;
+    /* padding-top: 20px; */
+    display: inline-block;
+    
+}
+textarea{
+    resize: none;
+}
+#orange #fraise #mangue{
+    width: 10%;
+}
+/*****************FIN FORMULAIRE*********************/
+/*****************MULTIMEDIA*************************/
+/**********ma page Multimédia********/
+
+.videoFond{
+
+  padding-left: 0;
+
+  padding-right: 0;
+
+}
+
+.videoFond video{
+
+  position: absolute;
+
+  z-index:1;
+
+  width: 100%;
+
+}
+
+.videoTexte{
+
+  position: relative;
+
+  width: 100%;
+
+  height: 500px;
+
+}
+
+.videoFond p{
+
+  position: absolute;
+
+  z-index: 2;
+
+  width: 500px;
+
+  margin: auto;
+
+  background: rgba(255,255, 255, 0.6);
+
+  left: 250px;
+
+  top: 100px;
+
+  padding: 20px;
+
+  font-size: 120%;
+
+  border-radius: 10px;
+
+}
+
+iframe[allowfullscreen]{/*Cet attribut, lorsqu'il est TRUE(vrai) indique que l'IFRAME
+
+intégré peut-être passé en pleine écran avec la méthode Element.requestFullscreen()*/
+
+width: 100%;
+
+}
+
+.audio{
+
+  text-align: center;
+
+}
+
+/************Fin de ma page multimédia***********/
+/************Fancyboy***********/
+a img {
+
+  
+
+   width: 100%;
+
+      
+
+}
+a {
+
+   text-decoration: none;
+
+   outline: none;
+
+}

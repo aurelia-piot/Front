@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ma page structure</title>
+    <title>Multimedia</title>
     <!--Titre du site apparait sur l'onglet-->
     <meta name="description" content="Ma premier page en HTML/CSS">
     <!-- Description sous le titre dans la recherche Google, les moteurs de recherches s'en s'ervirent un peu comme de mots clefs pour les rechercher -->
@@ -57,29 +57,77 @@
         <a href="explications.html">Explication</a>
     </nav>
     <main>
-        <!-- main contenu principal de la page-->
-        <aside>
-            <!--Aside : contenu secondaire-->
-            <marquee behavior="scroll" direction="left" scrollamont="10">
-                <h5>Session de Vitry 2018/2019</h5>
-            </marquee>
-            <marquee behavior="scroll" direction="right" scrollamont="6">
-                <h5>Voici mon premier Site</h5>
-            </marquee>
-        </aside>
-        <section>
-            <!-- section : zone de contenu : titre, texte, regroupement thématique-->
-            <div>
-                <!-- div: Zone supplementaire de contenu-->
+        <!-- Main : Contenu principal de la page-->
+    
+        <h2>Multimédia</h2>
+    
+        <section class="videoFond">
+    
+            <h3>Vidéo en fond</h3>
+    
+            <div class="videoTexte">
+    
+                <video autoplay loop>
+    
+                    <source src="Video/videoBackground.mp4" type="video/mp4">
+                    <source>
+    
+                </video>
+    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    
+                    Dolorem doloribus harum dolorum expedita totam consectetur veritatis amet,
+    
+                    tempora, sit natus accusantium nihil ea officia in. Quos pariatur incidunt quibusdam! Itaque. Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit.
+    
+                    Necessitatibus odit sed quae culpa animi nobis temporibus tempore est, earum ipsum reiciendis ut,
+    
+                    eveniet laudantium minima aspernatur vitae magnam provident omnis!</p>
+    
             </div>
-            <span>
-                <!-- span: zone supplementaire de contenu-->
-                <!-- span est un conteneur generique en (inline) pour les contenus phrasés, il ne represente rien de particulier-->
-            </span>
-            <article>
-                <!--Article : Zone supplementaire de contenu-->
-            </article>
+    
         </section>
+    
+        <section>
+    
+            <h3>Video Youtube</h3>
+    
+           
+                <iframe width="560" height="550" src="https://www.youtube.com/embed/VufDd-QL1c0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+    
+        </section>
+    
+        <section>
+    
+            <h3>Audio</h3>
+    
+            <div class="audio">
+    
+                <h4>Format Mp3</h4>
+    
+                <audio src="audio/son.mp3" controls></audio>
+    
+    
+    
+                <h4>Format Ogg</h4>
+    
+                <audio src="audio/son.ogg" controls></audio>
+    
+            </div>
+    
+        </section>
+    
+        <section>
+    
+            <h3>Carte Google Map</h3>
+    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.8631468273697!2d2.323527715677178!3d48.93704837929529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2b2aeafa51%3A0xe5ba99ade19888d8!2s11+All%C3%A9e+Saint-Exup%C3%A9ry%2C+92390+Villeneuve-la-Garenne!5e0!3m2!1sfr!2sfr!4v1501488013221"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+        </section>
+    
     </main>
     <a href="#logo"><button type="button"><i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i></button></a>
     <!-- aria accés de contenu web plus facile pour les handicapés => developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA -->
