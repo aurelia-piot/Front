@@ -1,0 +1,226 @@
+body{
+background: rgb(36, 36, 36);
+}
+
+
+header{
+    background:rgb(228, 228, 228) ;
+    height: 300px;
+}
+#gauche{
+    width: 499px;
+    padding-left: 444px; 
+    float: left;
+    padding-top: 120px;
+}
+#droite{
+    width: 500px;
+    float: right;
+    padding-right: 444px;
+
+}
+.sport{
+    background: url(/img/logo.png);
+    margin: 20px 100px 10px 0;
+    width: 350px;
+}
+#gauche p span{
+    color:orange;
+}
+
+
+.containerart{
+    background: rgb(218, 218, 218);
+    border: 1px solid rgb(61, 61, 61);
+    height:75px ;
+    width: 420px;
+    margin-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    padding-top: 15px;
+    /* float: left;  */
+}
+.moncompte{
+    float: left;
+    width: 50%;
+}
+.paniervide{
+    float: left;
+    width: 50%;
+}
+.containerart .moncompte p ,.containerart .paniervide p{
+    width:100px;
+    float: right;
+}
+.nom{
+    width: 500px;
+    text-align: right;
+}
+.butt p{
+    text-align: center;
+    margin-top: 35px;
+    padding-left: 15px;
+    padding-right:15px;
+     float: left;
+    height: 20px;
+    width: 100px;
+    border-left: 1px solid rgb(146, 146, 146);
+    border-right: 1px solid rgb(146, 146, 146);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************main**********************************************/
+
+main{
+    margin: 20px  auto 0 auto;
+    background:rgb(224, 224, 224);
+    height:1500px;
+    width:1000px ;
+
+}
+.photohead{
+    height: 330px;
+    background:rgb(71, 71, 71) url(../img/header-page-catalogue.png) no-repeat;
+}
+
+.containerimg{
+    margin: 0 auto;
+    float: left;
+    padding-left: 95px;
+    padding-right: 95px; 
+    width: 310px;
+}
+
+.containerimg .imgs{
+    margin-top:20px; 
+    box-shadow: 0px 0px 8px rgb(48, 48, 48);
+    text-align: center;
+    width: 305px;
+    background: white;
+}
+.containerimg2{
+    float: right;
+}
+
+.reduc{
+    background: rgb(65, 65, 65);
+    border-radius:5px ;
+    width: 55px;
+    height: 45px;
+    color: rgb(253, 162, 44);
+    text-align: center;
+    float: left;
+    overflow: visible;
+    margin-left: 280px;
+    margin-top: 25px;
+    border-style: groove;
+    border-color: rgb(156, 156, 156);
+    font-weight: 900;
+    box-shadow: 2px 2px 5px rgb(44, 44, 44) inset;
+}
+
+
+
+.vente, .prix1 , .prix2{
+    float: left;
+}
+.vente{
+    background: rgb(29, 29, 29);
+    color: white;
+    width: 90px;
+    height: 20px;
+    padding: 5px 10px;
+}
+.prix1{
+    font-size: 13pt;
+    margin-left:40px; 
+    text-decoration: line-through;
+}
+.prix2{
+    font-size: 26pt;
+    font-weight:900; 
+    margin-left:35px; 
+    margin-top: 10px;
+    color: rgb(255, 102, 0);
+    
+}
+
+
+.boutons{
+    margin: 0 auto;
+   margin-top: 1075px;
+    background: rgb(211, 211, 211);
+    width: 335px;
+    height:55px;
+    border-radius: 6px;
+    
+}
+
+.boutons p {
+    float: left;
+    padding: 0 6px 0 6px;
+    border-left:1px solid black;
+}
+
+
+
+
+
+
+/*******************************FooT******************************/
+
+
+footer{
+    background: rgb(59, 59, 59);
+    height: 500px;
+   
+}
+
+.icones{
+     padding-top: 70px;
+     padding-left: 480px;
+     height: 300px;
+    
+
+}
+.icone1{
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    float: left;
+    margin-left: 20px;
+} 
+.icone1 img{
+    background: white;
+    width: 67px;
+    height: 67px;
+    border-radius: 100%;
+}
+
+
+ .logos{
+     height: 40px;
+    margin-left:800px;
+}
+.logo1{
+    float: left;
+    padding-left: 40px; 
+}
+.mentionleg{
+    margin-top: 60px;
+    text-align: center;
+    color: rgb(209, 209, 209);
+}
