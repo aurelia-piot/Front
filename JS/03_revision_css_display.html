@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    p{
+        background-color: forestgreen;
+
+    }
+    strong{
+        background-color: yellow;
+        /*strong etant un element inlline, c'est une boite de ligne dont la largeur s'adapte a sont contenu (ici du text);*/
+        padding:1rem;
+        /*les marges top et bottom ne fonctionnent pas sur les elements inline*/
+        /*le width et height ne fonctionnent pas sur les elements inline*/
+    }
+    em{
+        background-color: thistle;
+        padding:1rem;
+        display: inline-block;
+    }
+    ul{
+        border: 2px solid crimson;
+        list-style: none;
+        /*ATTENTION les Ul ont un padding-left de 40px par defaut*/
+        padding-left: 0;/*pour reset le padding*/
+    }
+    li{
+        border: 2px solid gold;
+        display: inline-block;
+        padding: 1rem;
+    }
+    section{
+        border:2px solid aquamarine;
+        width: 60%;
+    }
+    section div{
+        border:  2px solid firebrick;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 1rem;
+        float: left;
+        
+        /*avec le float , les div peuvent depassers de leur parent*/
+
+    }
+    /*boite a outils des float: le clearfix
+    on l'attribut la class="clearfix" a la balise parent des flottant*/
+    .clearfix:after{
+        content: '';
+        display:table;
+        clear: both;
+    }
+    /*le clear sert a "revenir a la normal" 
+    en general a annuler un float*/
+    
+    </style>
+
+
+
+
+</head>
+<body>
+    
+<p>
+    Lorem ipsum dolor, sit amet <strong>DU GRAS</strong> consectetur adipisicing elit. Eveniet impedit officia accusamus doloribus a facilis, quos quidem deleniti vel nam, ea soluta natus. Suscipit ad ab deleniti. Dicta, possimus doloremque?
+</p>
+<p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores <em> DE L'italic</em> similique cupiditate quisquam obcaecati sit reiciendis esse corporis rem deserunt molestias aspernatur repudiandae illum omnis, eum dolore quia vitae delectus perferendis!
+</p>
+<p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores similique cupiditate quisquam obcaecati sit
+    reiciendis esse corporis rem deserunt molestias aspernatur repudiandae illum omnis, eum dolore quia vitae delectus
+    perferendis!
+</p>
+<ul>
+    <li>pomme</li>
+    <li>banane</li>
+    <li>fraise</li>
+    <li>poire</li>
+</ul>
+<section class="clearfix">
+    <div>UN</div>
+    <div>DEUX</div>
+    <div>TROIS</div>
+</section>
+
+
+</body>
+</html>

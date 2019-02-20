@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .container{
+        margin: 0 auto;
+        width: 80%;
+        border:2px solid olivedrab;
+        
+
+
+    }
+    p{
+        border: 2px solid black;
+    }
+    /*boite a outils des flottants*/
+    .flt_l{
+        float: left;
+    }
+    .clear{
+        clear: both;
+        display: table;
+    }    
+
+    
+    /*la class ="clearfix" se donne aux parent pour qu'ils contienent ses enfants flotants(sinon ils depassent)*/
+    .clearfix:after{
+        content: 'FAUX FOOTER';
+        clear:both;
+        display: table;
+    }
+   
+    </style>
+
+
+
+</head>
+<body>
+    <!-- on peut donc donner plusiers class  -->
+<div class="container clearfix">
+        
+    <img class="flt_l" src="images/montagne.jpg" alt="">
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam necessitatibus sint, adipisci explicabo nesciunt facilis. Repellat iure necessitatibus adipisci, tempora, porro nam placeat natus odit, voluptatum eaque vel dolore!</p>
+        <strong class="clear">le cervin</strong> 
+
+
+        <img class="flt_l" src="images/montagne.jpg" alt="">
+        <!-- <footer class="clear" >&coco design</footer> -->
+</div>
+
+
+
+
+
+
+</body>
+</html>

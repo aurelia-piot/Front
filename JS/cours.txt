@@ -1,0 +1,75 @@
+
+
+
+https://caniuse.com/#tables
+
+
+https://www.quirksmode.org/
+comparatifs navigateur
+
+
+
+taille et police par defaut:
+ times new roman, serif, en 16 px;
+
+
+ the noun project : pour trouver des icones(propose du vectoriel)
+ aurelia.piot@lepoles.com
+ Vitry20182019
+ les images en svg addapte leur tailles a la zone attribue
+ (svg en vectoriel donc ne perd pas en qualitée a l'agrandissement)
+
+
+ /////////////////////////////////////////////////////////////////////////////////
+https://www.w3.org/TR/CSS2/sample.html
+ feuille de style du navigateur par defaut:
+ body            { margin: 8px }
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+
+h4, p,
+blockquote, ul,
+fieldset, form,
+ol, dl, dir,
+menu            { margin: 1.12em 0 }
+
+
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6, b,
+strong          { font-weight: bolder }
+blockquote      { margin-left: 40px; margin-right: 40px }
+ol, ul, dir,
+menu, dd        { margin-left: 40px }
+ol              { list-style-type: decimal }
+ol ul, ul ol,
+ul ul, ol ol    { margin-top: 0; margin-bottom: 0 }
+
+"*{
+        est un selecteur universel
+}"
+
+resumer: body = margin 8px
+        h1 a 6 on des marge top et bottom
+        ul et ol ont de marges et un padding-left de 40px
+        on utilise un reste pour elaguer les differences d'affichage sur les vieux naviguateurs et corriger quelque bugs d'affichage.
+
+
+
+        LES UNITE DE VALEUR
+        REM
+        1 rem est egale a 1x la valeur de font-size definit pour la balise html,
+        on ne change pas par la taille de la balise html on obtiens du 16px par defaut; et donc 1rem=16px;
+
+
+        EM
+        1em est egale a 1x la valeur de font-size de se balise parente.
+        par exemple : le h1 fait 2em par defaut. si le h1 est enfant de la balise body et qu'on a donné une font-size de 14px a body:
+        la taille de h1 sera 2x14px =28px.
+
+////////////////////////////////////////////////////
+                     
+
+    

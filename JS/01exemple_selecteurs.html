@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+   
+    a:link{
+        color: orange;
+        text-decoration: none;
+
+    }
+    a:visited{/*quand il a ete visiter*/
+        color: teal
+    }
+    a:active{
+        text-decoration: underline;
+    }
+    a:hover, a:focus{
+        color: blue;
+        outline: thin solid blue; /*bordure quand on le focus avec le "tab"*/
+        text-decoration: underline;
+    }
+    div{
+        padding: 1rem; /*1rem =16px*/
+    }
+    :target{ 
+        background: grey;
+        border-left: 4px rgb(37, 37, 37) solid;
+    }/*va changer le fond a ce qui va etre cibler*/
+
+    #chap2:target{
+        background: rgb(46, 46, 71);
+    }/*va changer le fond du chapitre 2 qui va etre cibler grace a sont id*/
+
+    [title]{/*"[]": selecteur d'attribut;selectione tout les elements qui ont un attribut title*/
+        font-weight: bold;
+        font-size: 20px;
+    }
+    /*[attr^=value] selecteur d'attribut : ,cible tout les liens dont l'attribut href commence par http*/
+    /*[attr$=value] selecteur d'attribut : ,cible tout les "attr" dont l'attribut termine par la "value"*/
+    /*et leur mettre une bordure pointiller*/
+    [href^=http]{
+        display: inline-block;
+        background-color: rgb(185, 185, 185);
+        border-bottom:3px dotted black;
+        margin-bottom: 2rem;/*les elements margin et paddings ne fonctionnent pas sur un element inline (marche sur block et inline-block*/
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+        background-image: url(images/externlink.svg);
+        background-repeat: no-repeat;
+        background-position:  right 0.25rem;
+        background-size:1.5rem auto; /*largeur de 1.5rem et hauteur homotetique=
+        la hauteur est automatiquement calculer en fonction de la largeur*/
+
+
+        /* tout en plus court
+        background: silver url(images/externlink.svg) no-repeat right 0.5rem;
+        couleur de fond | image |repetition| position x | position y*/
+
+    }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <nav>
+    <a href="https://www.apple.com" title="lien vers apple">lien apple </a>
+    <a href="https://www.ratp.fr/" title="lien vers RATP">RATP</a>
+    <br>
+    <!-- lien absolue: vers une page exterirue a mon site , contiens toujour une adresse web web complete avc le protocole http. -->
+    <a href="#chap1">chapitre 1</a>
+    <a href="#chap2">chapitre 2</a>
+    <a href="#chap3">chapitre 3</a>
+
+    </nav>
+
+
+<section>
+    <div id="chap1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed quisquam vitae, dignissimos ut architecto eveniet,
+    eaque debitis consequatur porro, amet minima! Cumque, iure qui est autem fugit quia repudiandae! </div>
+
+    <div id="chap2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed quisquam vitae, dignissimos ut architecto eveniet,
+    eaque debitis consequatur porno, amet minima! Cumque, iure qui est autem fugit quia repudiandae!</div>
+
+    <div id="chap3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed quisquam vitae, dignissimos ut architecto eveniet,
+    eaque debitis consequatur porro, amet minima! Cumque, iure qui est autem fugit quia repudiandae!</div>
+
+    </section>
+    
+</body>
+</html>

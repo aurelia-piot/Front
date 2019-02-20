@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+            /*le selecteur universel,se lit toutes les balises
+            ici le box-sizing: border-box; fera en sorte que la taille totale d'une box comprene aussi les padding et les borders*/
+            *{
+                box-sizing: border-box;
+            }
+            .container {
+                margin: 0 auto;
+                width: 80%;
+                border: 2px solid olivedrab;
+                
+       
+            }
+            .container figure{
+                width: 25%;
+                border: 2px solid orange;
+               margin: 0;
+               float: left;
+            }
+            figure img{
+                
+                max-width: 100%;
+                /*ou width:100%; si l'image est plus petite que sont parent*/
+            }
+
+
+
+            p {
+                border: 2px solid black;
+            }
+        
+            /*boite a outils des flottants*/
+            .flt_l {
+                float: left;
+            }
+        
+            .clear {
+                clear: both;
+                display: table;
+            }
+        
+            /*la class ="clearfix" se donne aux parent pour qu'ils contienent ses enfants flotants(sinon ils depassent)*/
+            .clearfix:after {
+               content: ''; 
+                clear: both;
+                display: table;
+            }
+            /*LES MEDIAS QUERIES*/
+            /*pour tous les ecrans plus petit que 640px on va mettre 2 figures par lignes*/
+            @media (max-width:640px){
+                body{
+                    background: hotpink;
+                }
+                .container{
+                    width: 100%;
+                }
+                .container figure{
+                    width: 50%;
+                }
+
+            }
+ /*pour tous les ecrans plus petit que 480px on va mettre 1 figures par lignes*/
+             @media (max-width:480px){
+                 body{
+                     background: rgb(0, 0, 0);
+                     color: white;
+                 }
+                 .container figure{
+                    width: 100%;
+                 }
+             }
+
+
+
+
+
+
+
+
+
+
+        </style>
+
+</head>
+
+
+
+
+
+<body>
+    <div class="container clearfix">
+        
+
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>la montagne</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>la montagne</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>la montagne</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>la montagne</figcaption>
+        </figure>
+
+   
+  
+   
+   
+   
+   
+   
+   
+   
+   
+    </div>
+</body>
+</html>
