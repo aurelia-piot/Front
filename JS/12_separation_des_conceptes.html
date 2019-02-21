@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    
+    <style>
+    
+    p{
+        font-family: 'Helvetica', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgb(3, 3, 15);
+        background: rgba(0, 0, 119, 0.603);
+        padding: 3px 10px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 1px 1px 2px rgba(0, 6, 26, 0.8);
+        cursor: pointer;
+    }
+
+
+    </style>
+</head>
+<body>
+    <p>
+        ton Prenom: Aurelien
+    </p>
+
+
+
+    <script>
+    var para = document.querySelector('p');
+    /* va selectionner ici les p*/
+    para.addEventListener('click',changeNom);
+    /*un ecouteur d'evenement, il attend 2 arguments : le 1er est l'evenement qu'on attend, qui va declencher le second argument*/
+    function changeNom(){
+        var nom = prompt('entre ton prénom');
+        para.textContent = 'Ton Prenom:' + nom ;
+    }
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position absolute</title>
+
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+    .container1{
+        margin: 0 auto;
+        background: gray;
+        border: 2px solid black ;
+        width:80% ;
+       /* margin: 122px auto 0; top , left-right , bottom*/
+      
+       padding-top:122px; 
+    }
+    /*on cible le 1er p du container*/
+    .container1 p:nth-of-type(1){
+        color: orange;
+        position: relative;
+        /*sa position relative permet que le .badge soit placé par rapport au 1er p
+        car il a une position*/
+    }
+   
+    .badge{
+        width:80px ;
+        line-height: 80px;
+        background: crimson;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        left: -83px;
+        top: -18px;
+        
+    }
+    /*un element placé en absolute est placé par rapport a sont premier ancetre positionner;
+    mais si il n'a pas d'ancetre positionner ; il sera placer par rapport au Body.*/
+
+    /*VALEURS POUR LA PROPRIETER POSITION:
+    -STATIC
+    par defaut toute les balises sont en position static;(elle ne sont donc pas positionner et restent dans le flux)
+
+    -RELATIVE
+    un element positionner en realtive sera positionner a son emplacement naturel dans le flux (comme si il y avait une marge)
+    son emplacement est reservé.
+    un element relatif devient referant(ou cadre) de positionnement pour ces enfants absolute.
+    par exemple dans ce contexte on va donner une position :relative au 1er p pour que le .badge en absolute soit calé par rapport à ce p. 
+    
+    -FIXED
+    un element en fixed sera calé par rapport au viewport (fenetre du navigateur), meme si la page scroll ,l'objet fixed reste calé sur la fenetre.
+    */
+nav{
+    border-bottom: 3px solid navy;
+    padding: 1rem;
+    position: fixed;
+    color: white;
+    background: rgba(24, 26, 32, 0.5);
+    width: 100%;
+
+    
+}
+nav ul{
+    /*reset du padding existant par defaut*/
+    padding-left:0; 
+    /*display:fley permet d'aligner les enfants */
+    display: flex;
+    justify-content: space-around;
+    /*justify-content: space-between;
+    permet de positioner de maniere egale les elements dans leurs espaces 
+    il gere les positions flex    */
+
+    
+}
+nav li{
+    border: 2px solid black;
+    padding: 1rem;
+    list-style:  none;
+}
+a{
+    position:absolute;
+}
+.carre{
+background: rgb(10, 10, 24);
+width:80px ;
+line-height:80px ;
+text-align: center;
+top: 200px;
+right:150px;
+color:white;
+}
+.rond{
+background: red;
+width:80px ;
+line-height:80px ;
+text-align: center;
+border-radius: 50%;
+top: 180px;
+right: 120px;
+color:white;
+}
+.triangle{
+/* background: green;
+width:80px ;
+line-height:80px ; */
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 80px solid blue;
+    text-align: center;
+    color:rgb(0, 0, 0);
+top: 240px;
+right:130px;
+}
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>galerie</li>
+            <li>contacts</li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+<div class="container1">
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, repellendus debitis cum, quia laborum sequi fugit perspiciatis eaque iusto eos, eligendi accusamus adipisci officia nam fuga expedita error repellat. Magnam?
+
+        <span class="badge">
+            New
+        </span>
+
+
+    </p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quidem itaque nesciunt, ab sit esse rerum, officia fuga voluptas consectetur blanditiis debitis voluptatum assumenda animi eligendi dignissimos delectus nobis suscipit. </p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nostrum quidem itaque nesciunt, ab sit esse rerum, officia fuga voluptas consectetur blanditiis debitis voluptatum
+        assumenda animi eligendi dignissimos delectus nobis suscipit. </p>
+
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nostrum quidem itaque nesciunt, ab sit esse rerum, officia fuga voluptas consectetur blanditiis debitis voluptatum
+            assumenda animi eligendi dignissimos delectus nobis suscipit. </p>
+
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum quidem itaque nesciunt, ab sit esse rerum, officia fuga voluptas consectetur blanditiis debitis voluptatum
+                assumenda animi eligendi dignissimos delectus nobis suscipit. </p>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <a href="#" class="carre">CARRE</a>
+        <a href="#"class="rond">ROND</a>
+        <a href="#" class="triangle">TRIANGLE</a>
+
+
+
+
+</div>
+
+    
+</body>
+</html>

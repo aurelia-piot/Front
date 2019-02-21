@@ -8,6 +8,17 @@ https://www.quirksmode.org/
 comparatifs navigateur
 
 
+https://flexboxfroggy.com/#fr
+pour comprendre les Flex.
+
+
+
+https://www.w3.org/TR/css-2010/
+toutes les propietées css, leurs utilisations et leurs applications.
+
+
+
+
 
 taille et police par defaut:
  times new roman, serif, en 16 px;
@@ -22,6 +33,7 @@ taille et police par defaut:
 
  /////////////////////////////////////////////////////////////////////////////////
 https://www.w3.org/TR/CSS2/sample.html
+
  feuille de style du navigateur par defaut:
  body            { margin: 8px }
 h1              { font-size: 2em; margin: .67em 0 }
@@ -68,8 +80,163 @@ resumer: body = margin 8px
         1em est egale a 1x la valeur de font-size de se balise parente.
         par exemple : le h1 fait 2em par defaut. si le h1 est enfant de la balise body et qu'on a donné une font-size de 14px a body:
         la taille de h1 sera 2x14px =28px.
+////////////////////////////////////////////////////
+                        FLOAT
+    voir le cour 04 et 05                             
+////////////////////////////////////////////////////        
 
 ////////////////////////////////////////////////////
-                     
+                     POSITIONS
+    un element placé en absolute est placé par rapport a sont premier ancetre positionner;
+    mais si il n'a pas d'ancetre positionner ; il sera placer par rapport au Body.*/
 
-    
+  VALEURS POUR LA PROPRIETER POSITION:
+   -STATIC
+    par defaut toute les balises sont en position static;(elle ne sont donc pas positionner et restent dans le flux)
+
+   -RELATIVE
+    un element positionner en realtive sera positionner a son emplacement naturel dans le flux (comme si il y avait une marge) de son emplacement reservé.
+    un element relatif devient referant(ou cadre) de positionnement pour ces enfants absolute.
+    par exemple dans ce contexte on va donner une position :relative au 1er p pour que le .badge en absolute soit calé par rapport à ce p
+
+   -FIXED
+    un element en fixed sera calé par rapport au viewport (fenetre du navigateur), meme si la page scroll ,l'objet fixed reste calé sur la fenetre.
+   
+   -ABSOLUTE???
+   (peut etre placer librement par rapport a un ancetre positionner avec "position")
+   il sort du flux.
+
+    ////////////////////////////////////////////////////
+                        FLEX
+display: flex;
+
+  justify-content: space-around; a voir???
+  justify-content: space-between;
+    permet de positioner de maniere egale les elements dans leurs espaces 
+    il gere les positions flex    
+
+     //////////////////////////////////////////////////// 
+     
+     
+     
+     ////////////////////////////////////////////////////
+                                INTRO
+
+Le JavaScript (developpement cote client *front-end developpement)
+est tout ce qui est traité par le naviquateur et affiché au visiteur (user)
+(en tant que developpeur on est auteur (author)
+
+le dev Javascript permet principalement de réagire aux actions de l'utilisateur,
+directement dans le navigateur.
+
+AJAX ; Ansynchronous JavaScript And Xml
+        permet les changement sans reload de la page (ex: changement de donnée (data)).
+
+Les Qualitée requises : la RIGUEUR
+                primordial dans l'ecriture du code, la moindre erreure de synthax peut etre fatal.
+                etre attentif et consentré et se relire constament.
+                valider sur W3C,TEXTER TOT et SOUVENT.
+                un signe ecrit 2 fois au lieu d'1 peu inverser totalment la signification du code.
+
+                        L'ORGANISATION
+                rangement des fichiers et dossier, nomenclature, commentaire, faire au plus simple ,commenté et lisible.
+
+                La CAPACITE d'ABSTRACTION
+                quand on fait face a un probleme a resoudre , on doit savoir fractionner celui-ci en morceaux plus digestes et garder une vue globale de l'ensemble de ce qu'on ecrit.
+
+
+-Avant de commencer a ecrire, on doit etre capable de visualiser le resultat du code qu'il va executer.                
+
+
+////////////// ////////////////////////////////////////////////////
+                                INTRO JAVASCRIPT
+        La version actuelle de Javascript, JS en abregé, ES6 est une implémentation d'un langage de Scrip appelé EcmaScript (standardisé dans les années 90 par Netscape).
+
+        Inventer par Brendan Eich, Confondateur duprojet Mozilla.
+        ESS est utilisé depuis 2009, on arrive doucement à ES6 aujourd'hui.
+
+        Qu'est ce que Javascript permet de faire:
+                Definir une action au clic
+                Verfifier des donner dans un formulaire
+                detecter des cchangement de page et lancer des alertes
+                stocker des valeurs utiles dans des variables
+                Faire des operations sur des morceaux de texte (chaine de caracter=string)
+                permet d'executer du code en reponse a un certain evenement se produisant sur une page web
+                créer oue declancher des animations.
+                Faire des Carousel, menus deroulants, galerie d'images interactive,gerer la video et audio.
+                Créer des Jeux, Des graphique 2d et 3d (Datavisualisation)(graphique editorial = % en camenbert)
+                des application completes fondées sur des bases de données
+                des applications mobiles (online ou offline)
+
+ JS est un langage compact en restant souple.
+
+ Les developpeurs ont ecris de nombreux outils sur le coeur de JavaScript(core), creant des fonctionnalités supplémentaires.
+
+ Parmis ces outils :2 categories d'API: le API navigateurs et les API tierce partie.
+
+ API: Application progamming Interface;(interface de programation  d'application pour navigateur).
+ Ce sont des blocs de code deja pret, qui permettent au developpeur de créer plus facilement des programme ( boite à outils deja developpés et testés)
+ C'est comme du code en "Kit" pour la programmation .
+
+ Les APIs navigateur font partie integrante du navigateur,et peuvent acceder a des donner de l'environnenement informatique (l'ordinateur, le mobile),ou faire d'autre choses complexes:
+        L'API DOM (Document Objet Model)
+                ça nous permet de manipuler du HTML et du CSS (créer,modifier,supprimer du HTML,
+                appliquer de nouveau a la page de façon dynamique).
+             Exemple :Créer une pop-up, charger des nouveaux contenus dans une page, il s'agit de l'action du DOM.
+        
+        https://fr.wikipedia.org/wiki/Document_Object_Model
+        (https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction)
+
+
+        API GEOLOCALISATION permet de recuuperer des données geographiques de l'utilisateur (position longitude et latitude)
+        (https://en.wikipedia.org/wiki/W3C_Geolocation_API)
+
+      https://developer.mozilla.org/fr/docs/Web/API/Geolocation
+      https://developer.mozilla.org/fr/docs/Using_geolocation
+
+      APIs Canvas et WebGL :permet de créer des graphique animé en 2d(canvas) et en 3d(WebGL)
+
+      https://developer.mozilla.org/fr/docs/Web/HTML/Canvas
+      https://developer.mozilla.org/en-US/docs/Web/Demos_of_open_web_technologies
+      https://developer.mozilla.org/fr/docs/Web/API/WebGL_API
+
+https://www.freeriderhd.com/t/1016-layers
+http://www.blobsallad.se/
+
+online image editor:
+https://github.com/viliusle/miniPaint
+
+API Video et Audio permet de lire la video et l'audio sans plugin 
+API WebRTC (peer to peer):
+https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API#Connection_setup_and_management
+
+API web storage: (faire des appli offline)
+https://developer.mozilla.org/fr/docs/Web/API/Web_Storage_API
+
+
+
+compresser de la video dans les formats web:
+OGG / MP4 / Webm
+https://handbrake.fr/
+ exemple Dataviz:
+ https://editorializer.relaxnews.com/en/select/add-feed
+
+
+ LEs APIs tierce parties :Librairies fournies par des fournisseurs de contenue,
+ ne font pas partie par defaut du navigateur, on doit recuperer le code de la librairie ( faire le liens avec la librairie) pour pouvoir l'utiliser dans son site.
+
+ L'API Twitter qui permet par exemple d'afficher les dernier tweet dans votre page
+https://developer.twitter.com/
+
+L'API de googlemaps : permet d'afficher des cartes personnalisées
+https://cloud.google.com/maps-platform/
+
+autre API tierces paries: https://www.programmableweb.com/category/all/apis
+
+
+-----------------------
+Separation des conceptes:
+les regles de bases:
+-pas de CSS dans Javascript
+-pas de balise HTML dans le JavaScript
+-pas de CSS dans le HTML (des feuilles de styles internes ou externe oui mais on evite les style inlines == <p style="color:red;">lorem </p>)

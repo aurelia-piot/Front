@@ -47,9 +47,11 @@
             }
         
             /*la class ="clearfix" se donne aux parent pour qu'ils contienent ses enfants flotants(sinon ils depassent)*/
-            .clearfix:after {
+            .clearfix::after {
                content: ''; 
                 clear: both;
+                /* ""::after permet de positioner son content (ici vide) apres l'element de la class dont il a ete attribuer,
+                ici c'est pour encadrer les images*/
                 display: table;
             }
             /*LES MEDIAS QUERIES*/

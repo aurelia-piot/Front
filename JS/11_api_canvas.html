@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <style>
+    #moncanvas{
+        border: 2px solid orange;
+        height: 300px;
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="moncanvas">
+
+    </canvas>
+
+
+
+
+
+    <script>
+    var canvas = document.getElementById('moncanvas');
+    /*getElementById = recupere l'element pas son id*/
+
+    var feuille = canvas.getContext('2d');
+    /*créer une surface de dessin 2d*/
+    feuille.fillStyle = 'tomato';
+    feuille.fillRect(20, 5, 100, 20);
+    /* position x | position y | largeur | hauteur*/
+    feuille.fillStyle = 'orange';
+        feuille.fillRect(60, 5, 20, 100);
+
+    
+    </script>
+</body>
+</html>

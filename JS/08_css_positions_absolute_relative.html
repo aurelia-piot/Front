@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position absolute relative</title>
+    <style>
+    
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin: 0;
+
+    }
+
+    .container{
+        border: 2px solid crimson;
+        width: 70%;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+    .forme{
+        display: block;
+        position: absolute;
+        text-indent: 10000px;
+    }
+    .carre{
+        z-index: 1;/*place le carre devant le rond*/
+        width: 80px;
+        height:80px;
+        background: cyan;
+        right: 0;
+        top: 50%;
+    }
+      .rond{
+        width: 80px;
+        height:80px;
+        border-radius:50%; 
+        background: rgb(94, 255, 0);
+        top: 50%;
+        right: 40px;
+    }
+    .triangle{
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border: 40px solid transparent;
+    border-color: transparent  transparent transparent orange;
+    top: 50%;
+    right: -20px;
+    }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere, repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam qui beatae quasi hic nisi, quas, facere,
+            repudiandae placeat alias optio consequatur eligendi sapiente reprehenderit molestiae a soluta! Minima, suscipit?
+        </p>
+
+
+
+        <a href="#" class="forme carre">CARRE</a>
+        <a href="#"class="forme rond">ROND</a>
+        <a href="#"class="forme triangle">TRIANGLE</a>
+    </div>
+    
+</body>
+</html>
