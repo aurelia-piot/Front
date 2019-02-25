@@ -1,0 +1,111 @@
+                            FONCTIONS
+
+
+
+les instructions
+un script JS est un fichier contenant des instructions, placées les unes a la suite des autres .
+chacune des ces instructions peut etre vu comme un ordre donner au moteur JS d'une action que l'on souhaite realiser , à la maniere d'une recette de cuisine:
+    -faire fondre le beurre
+    -melanger le beure et la farine
+    -Verser le Chocolat petit à petit 
+    -ect
+
+les instructions se suivent et sont effectuée les unes a la suites des autres, du haut vers le bas(comme en CSS), le browser parse (analyse) dans l'ordre du flux.
+
+chaques instructions Doit ce terminer par un point-virgule ";" affin d'indiquer au moteur JS que l'instruction est terminée. 
+
+en l'absence de ";" en fin d'instruction, seul la ligne 1 s'executera, mais pas la suivante
+
+alert("ok ça marche");
+        [1, 2].forEach(alert);
+
+//ici comme on a bien mis le point virgule a la fin de l'instruction, le foreach s'execute bien et donc on voit bien 3 alert s'afficher successivement
+
+
+
+
+
+les fonctions permettent de regrouper un ensemble/une serie d'instructions pour pouvoir les réutiliser. 
+
+quand on a besoin du code d'une serie d'instruction , plutot que ré ecrire a chaque fois toute les instructions, on appellera une fonction par son nom(FaireUnGateau).Cette fonction Contient l'ensemble des instruction à executer. 
+
+ par exemple la fonction "alert" est une fonction native (integrer au navigateur )qui contient en gros les instruction suivantes:
+        -   créer un cadre de la boite de dialogue
+        -   positionner le cadre dans la fenetre
+        -   créer un background semi transparent sur toute la page
+        -   placer un bouton avec le text OK et un evenement Click
+        -   Créer une zone de texte qui s'affichera le text de l'alerte a presenter aux visiteurs
+
+ nous on a juste besoin d'utiliser la fonction alert() en lui donnant un argument(parametre) / ex 
+            alert("coucou").
+   La fonction executera toutes ces instruction à chaque fois 
+   On peut utiliser cette fonction Alert quand on veut en la declenchant avec alert(quelquechose).
+               ce quelquechsose) est un argument attendu par la fonction.
+
+ Ls fonction querySelector et alert() sont disponible dans le navigateur, ce sont des <strong>Methodes</strong>.    
+
+ si on vois quelque chose qui ressemble à une variable et qui est suivi de parenthese, c'est une fonction
+
+ Le fonctions prennent souvent des  arguments (-des bout de données dont elles ont besoins pour faire leur travail. Les arguments sont placé ENTRE les parenthese, séparées par des virgules, si il y en a plusieurs.)           
+
+par exemple la fonction alert() fait apparaitre un pop-up mais vous devez donner une chaine comme argument pour indiquer à la fonction ce que vous souhiatez ecrire dans la fenetre.
+
+nous pouvons ecrire nos propre fonctions
+
+ //2em exemple de fonction native
+        var maVariable = document.querySelector('h2');
+        alert("coucou 1");
+
+
+
+        //1er façon de declarer une fonction
+
+        function disBonjour(){
+            document.write("Bonjour !");
+        }
+//pour declancher la fonction (invoquer la fonction) il faut indiquer au moteur JS d'executer la Fonctioncar elle ne s'execute pas toute seul
+ disBonjour();
+
+ // 2em façon de declarer une fonction :
+ //assigner une fonction a une variable
+
+ disHello = function(){
+     document.write('Hello!');
+ }
+ // invoquer/declancher la fonction en ecrivant un couple de parenthese apres le nom de la fonction (c'est ce couple de parenthese qui declanche l'execution de la fonction)
+
+ disHello();
+
+
+ ici la variable disHello contient une reference à la fonction, on peut dire qu'elle pointe du doigt la fonction elle-meme
+ un fonction qui n'a pas son propre nom est appelée un fonction anonyme
+
+ //3em façon de declarer  une fonction et de l'invoquer
+ function ditHola(){
+     return "hola !";
+ }
+ salutation = ditHola();
+     document.write(salutation);
+
+ ici on vient de stocker dans une variable externe a la fonction, la valeur créée par cette fonction
+
+function addition(num1, num2){
+     //num 1 et num2 sont des parrametre attendu par la fonction addition
+     resultat = num1 +num2;
+     return resultat; //qui envoie le resultat a l'exterieur de la fonction
+ }
+ //dans l'invocation de la fonction on envoie deux arguments 
+ document.write(    addition(2,6) + "<br>"  );
+// ici le 2 devient l'argument num1 et le 6 devient l'argument num2
+
+
+///////////////////////////         EVENEMENT ///////////////////
+
+   document.querySelector('html')
+            .addEventListener('click',function(){
+                alert('tu as cliqué');
+            })
+    addEventListener attend 2 arguments : 1- l'evenement (on click..ect)
+                                          2- l'action que l'on va declencher 
+                                            (ici une alert())
+

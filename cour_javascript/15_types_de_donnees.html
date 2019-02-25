@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15</title>
+</head>
+<body>
+    
+
+
+    <script>
+       var maVariable = 10;
+       console.log(typeof maVariable);
+
+       //is NaN : is Not a Number
+       console.log(isNaN(100));     //fasle car 100 est un nombre
+       console.log(isNaN("100"));   //fasle car 100 est un nombre
+       //ici la chaine "100" est convertie en number par le navigateur avant d'être testée.
+        console.log(isNaN("abc100")); //renvoie true
+
+
+       var monText ='soleil';
+       console.log(typeof monText);
+    
+
+       var monBooleen = true;
+       console.log(typeof monBooleen);//renvoie booleen car c'est bien un booléen
+
+
+
+       var maListe = ['pomme','poire','banane',20];
+       //console.log(maListe);
+       console.log(typeof maListe);//renvoie object
+       //les objects son assemblés par le navigateur
+
+//structure du test if
+/* SI(cet condition est Vraie ou Fausse) alors {
+            Fais une chose;
+            fais une autre chose;
+            ect ...;
+}*/
+
+ /*      SI(il fait beaux){
+           ALORS
+           Je sort:
+
+       }*/
+
+// en Javascript si le nom du constructeur est egal à Array
+// ALors
+//affiche en console la chaine de caracteres 'Array' (Array=Tableau de donnée en fr)
+
+if(maListe.constructor.name== 'Array' ){
+    console.log('Array');
+
+}
+
+    
+    </script>
+</body>
+</html>

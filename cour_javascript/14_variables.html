@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+         
+
+
+
+
+  //ici on declare la variable a       
+   // var a= 10;
+ //ici on lui réassigne une nouvelle valeur .
+ //c'est cet valeur qui sera pris en compte.   
+   var a= 8;
+    
+     //Façon 1 de tester  
+  //  pour tester une variable , on ouvre la console, on ecrit le nom de la variable a droite de >> et on appuis sur ENTER
+
+
+     //Façon 2 de tester   
+//affiche une boite de dialogue (alert) contenant la valeur a.
+    //alert(a);
+//dans une alerte les guillements traiteront le contenue comme du text   
+   // alert("a"); 
+
+
+    // Façon 3 de tester
+ // on ecris dans le script
+     //console.log(a);
+ //  resultat :le naviqateur affiche le resultat de a dans la console.
+
+ var b= 4;
+  //console.log(b);
+
+
+
+//Façon 2 de declarer une variable
+var maVariable;
+maVariable = 'Eva';
+//console.log(maVariable);
+//ici se sera une chaine de caracteres.
+
+
+
+//definition de la variable ajoute
+    ajoute = a + b;
+  //pour l'afficher dans  une alert
+   // alert(ajoute);
+  //pour l'afficher dans la console
+   // console.log(ajoute)
+
+
+  //definition de la variable soustrait
+    soustrait = a - b;
+    
+  //  alert(soustrait);
+    
+    //console.log(soustrait)
+    //la console afficher 4 (8 - 4 = 4)
+
+
+
+   //definition de la variable multi
+    multi = a * b;
+     
+   // alert(multi);
+       
+    //console.log(multi)
+    //la console afficher 32 (8 * 4 = 32)
+
+ //**!**si on fait un calcule avec une variable non definis. le navigateur affichera une erreur en console: Refference Error: c is not defined
+// attention javascript est sensible aux majuscules et aux minuscules "a" est différent de "A" .
+
+var message; 
+message = 'Hello';
+
+message ='World';
+
+var Hello = 'Hello World';
+
+//alert(message);
+//on assigne a la variable "message" la valeur/contenu de la variable "Hello" . Hello et message ont le meme contenu 'Hello World'.
+message = Hello;
+
+//alert(message);
+
+
+/////////////////////////////////////
+
+prenom = "Aurelien";
+age = 22;
+
+//on fait une concatenation avec l'operateur '+'
+//resultat : Aurelien a 22 ans.
+console.log(prenom +' a '+ age+' ans.');
+//pour l'ecrire dans le document 
+ document.write(prenom + ' a ' + age + ' ans.')
+
+ console.log(12 <= 13);
+ // on demande si 12 est inférieur ou egal a 13, la reponse et positive donc le navigateur va repondre avec une valeur booléenne : true.
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+
+
+
+
+{}= accolades []=Crochets ""=guillement double (double quote) ''=guillement simple(quote)
+
+(1 et 2)==> ( 1 && 2)
+(1 ou 2) ==> ( 1 || 2) (alt gr + 6)
+
+
+La balise de script (<script>) Js dans le Html se situe a la fin (mais a l'interrieur) du Body.
+
+
+    ici on donne une valeur a notre variable.
+        var a = 22;
+        var b = 3;   
+
+    on retrouvera ces variables dans la console->console web
+        >> a
+         <-22 
+         qu'on faire interragire 
+         >> a+b
+         <-25   
+
+2 feuilles de scripts peuvent etre liées au meme Html
+on met les balises l'une apres l'autre dans le Body.
+si on utilise une feuille de scripts appart, ça balise ne contiendra que le liens de la feuille js.
+si on veut mettre en plus du scripts interne, il faudra faire une autre balise scripte.(meme si il est preferable de ne pas s'eparpiller. ).       
+
+
+//////////      VARIABLES         /////////////
+
+les variable sont des conteneur dans lesquelles on leur assignes un nom et une valeur .
+
+pour commencer il faut declarer une variable avec :
+        var 
+suivis du nom que l'on veut lui donner:
+        var a
+et on lui assignes une valeur avec le signe "=" :
+        var a = 4;
+            ou
+        a = 4;
+(le mot clef "var" indique ici une variable globale)  
+
+(((let a=4; est une declaration de variable en ES6(a ne pas utiliser aujoud'hui dans du ES5 qui est utiliser actuelement)(ECMA SCripts)))).
+
+//Façon 2 de declarer une variable
+var maVariable;
+maVariable = 'Eva';
+console.log(maVariable);
+//ici se sera une chaine de caracteres.
+
+
+EX:
+
+d = 10;
+plus tard dans le script
+d = 8;
+ici on viens de reassigner la variable d. j'ai "vidé" la boite contenant 10 pour y mettre la valeur 8.
+
+//affiche une boite de dialogue (alert) contenant la valeur a.
+    alert(a);
+//dans une alerte les guillements traiteront le contenue comme du text   
+    alert("a"); 
+    ici seul "a" s'affichera et non ça valeur "8"
+
+         //Façon 1 de tester  
+  //  pour tester une variable , on ouvre la console, on ecrit le nom de la variable a droite de >> et on appuis sur ENTER
+
+
+     //Façon 2 de tester   
+//affiche une boite de dialogue (alert) contenant la valeur a.
+    alert(a);
+//dans une alerte les guillements traiteront le contenue comme du text   
+    alert("a"); 
+
+
+    // Façon 3 de tester
+ // on ecris dans le script
+     console.log(a);
+ //  resultat : le naviqateur affiche le resultat de a dans la console.
+
+ //definition de la variable ajoute
+         ajoute = a + b;
+  //pour l'afficher dans  une alert
+         alert(ajoute);
+  //pour l'afficher dans la console
+         console.log(ajoute)
+
+
+//definition de la variable soustrait
+    soustrait = a - b;
+    
+    alert(soustrait);
+    
+    console.log(soustrait)
+    //la console afficher 4 (8 - 4 = 4)
+
+
+
+   //definition de la variable multi
+    multi = a * b;
+     
+    alert(multi);
+       
+    console.log(multi)
+    //la console afficher 32 (8 * 4 = 32)
+
+
+    var message; 
+message = 'Hello';
+
+message ='World';
+
+var Hello = 'Hello World';
+
+alert(message);
+//on assigne a la variable "message" la valeur/contenu de la variable "Hello" . Hello et message ont le meme contenu 'Hello World'.
+message = Hello;
+
+alert(message);
+
+/////////////////////////////////////
+
+prenom = "Aurelien";
+age = 22;
+//on fait une concatenation avec l'operateur '+'
+//resultat : Aurelien a 22 ans.
+console.log(prenom +' a '+ age+' ans.');
+//pour l'ecrire dans le document 
+ document.write(prenom + ' a ' + age + ' ans.')
+
+
+
+//**!** si on fait un calcule avec une variable non definis. le navigateur affichera une erreur en console: Refference Error: c is not defined.
+// attention javascript est sensible aux majuscules et aux minuscules "a" est différent de "A" .
+
+console.log(12 <= 13);
+on demande si 12 est inférieur ou egal a 13, la reponse et positive donc le navigateur va repondre avec une valeur booléenne : true.
+
+il faut toujour 2 signes    <=
+                            ==
+                            >=
+
+
+ var maVariable = 10;
+       console.log(typeof maVariable);
+ on demande quel type est ma variable; ici c'est 'number'
+
+  var monText ='soleil';
+        console.log(typeof monText);
+ on demande quel type est ma variable; ici c'est 'string'
+
+          //is NaN : is Not a Number
+
+       console.log(isNaN(100));     //fasle car 100 est un nombre
+       console.log(isNaN("100"));   //fasle car 100 est un nombre
+       //ici la chaine "100" est convertie en number par le navigateur avant d'être testée.
+
+        console.log(isNaN("abc100")); //renvoie true
+
+var monBooleen = true;
+       console.log(typeof monBooleen);//renvoie booleen car c'est bien un booléen
+
+ var maListe = ['pomme','poire','banane',20];
+       console.log(typeof maListe);//renvoie object
+       //les objects son assemblés par le navigateur
+
+       //structure du test if
+ SI(cet condition est Vraie ou Fausse) alors {
+            Fais une chose;
+            fais une autre chose;
+            ect ...;
+}
+
+EX:
+
+       SI(il fait beaux){
+           ALORS
+           Je sort:
+
+       }
+
+
+// en Javascript si le nom du constructeur est egal à Array
+// ALors
+//affiche en console la chaine de caracteres 'Array' (Array=Tableau de donnée en fr)
+
+if(maListe.constructor.name== 'Array' ){
+    console.log('Array');
+}
+
+
+//ici on crée un Tableau
+    var monTableau= ['pomme', 'poire', 'banane'];
+
+    //le type est un object
+    console.log(typeof monTableau);
+
+    // le nom du constructeur c'est un Array = un Tableau    
+    if (monTableau.constructor.name == 'Array') {
+            console.log('Array');
+    }
+
+    //pour recuperer une info stockée dans un tableau
+     // ici 'poire', on va utiliser un index (une clef) de tableau
+     //attention le 0 zero compte dans Javascript
+     console.log(monTableau[1]);
+     //donc dans les objets (tableau ici) on compte TOUJOURS en commençant par zero
+     // l'index de pomme est 0
+     // l'index de poire est 1
+
+//créer un tableau associatif/un dictionnaire
+    
+    traduc ={
+        "fraise": "strawberry",
+        "pomme" : "apple",
+        "poire" : "pear"
+    };
+    //pour recupérer une info dans un dictionnaire ,on utilise des mots clefs
+    //var.mot-clef
+    console.log(traduc.pomme);
+    //on recupere la traduction de la clef pomme, donc apple.
+
+//pour recupérer une info dans un dictionnaire ,on utilise des mots clefs
+    //var.mot-clef
+    console.log(traduc.pomme);
+    //on recupere la traduction de la clef pomme, donc apple.
+
+//{}= accolades []=Crochets ""=guillement double (double quote) ''=guillement simple(quote)
+    frigo = {
+        "fruits":["ananas","mangue","papaye"],
+        "legumes": ["poireaux","courgette",],
+        "laitages":["yaourts","lait"]
+    };
+    console.log(frigo.legumes[1]);//ici on a la courgette
+
+    mesFruits = frigo.fruits;
+    console.log(mesFruits);
+
+    //autre façon de recupérer la liste des legumes 
+    mesLegumes = frigo["legumes"];
+    console.log(mesLegumes);
+
+
+
+var operation1 = 1 + 2;
+     document.write(operation1+"<br>"); 
+     
+     maChaine ="je m'appelle " + "Aurelien";
+      document.write(maChaine + "<br>"); 
+
+
+      //la precedence des opérateur fera que la multiplication se fera avant l'addition.
+      var operation2 = 2 + 3 * 5;
+      document.write(operation2 + "<br>"); 
+
+        //on met l'addition entre parenthese pour qu'il se fasse en 1er.
+      var operation3 = (2 + 3) * 5;
+        document.write(operation3 + "<br>"); 
+
+
+      //le modulo(signe= %) : c'est le reste d'une division  
+      var operation4 = 10 % 2;
+        document.write(operation4 + "<br>"); // renvois 0 car il n'y a pas de reste dans la division 10 / 2 = 5
+        var operation5 = 17 % 3;
+            document.write(operation5 + "<br>");// renvois 2 car 17 / 3 =5 et reste 2
+
+
+            var monVehicule1 = "voiture";
+            var monVehicule2 = "camion";
+        //operateur de comparaison renvois les booléen true ou false
+        //signe === :egalité stricte on teste si la (valeur (camion) et type(string) sont egaux (ou pas))
+        //signe == operateur d'egalité ne teste que la valeur ,meme si le type est different , le navigateur renverra  true
+            document.write(monVehicule2 ==="velo" )+"<br>";//on a false car non , monvehicule2 n'est pas un velo.
+        //ici on a la valeur 20 et de la chaine de caractere dans les 2 cas //valeur 20 et string // renvoie true.
+            monChiffre ="20";
+            //document.write(monChiffre ==="20"+"<br>");
+        //ici on a la variable 20 et dans la variable une chaine , on demande si la variable monChiffre vaut 20 ET est un number// la console renvoie false car dans la variable monChiffre on a bien la valeur 20 mais PAS un number
+            document.write(monChiffre === "20" )+ "<br>";
+             document.write(monChiffre == 20 )+ "<br>";//true
+              document.write(monChiffre === 20 )+ "<br>";//false
+
+        //operateur de difference (NOT)
+        // ! NON
+        // != NON egal (est differant de)
+        // != NON strictmement egal 
+        var unChiffre = 3;
+        document.write(unChiffre !== 2) +"<br>"; //true car 2 est different de 3
+
+        //autre façon d'ecrire le NOT
+        var unDernierChiffre = 4;
+        document.write(      !(unDernierChiffre ===4)      );//renvois fasle car unDernierChiffre est bien egale a 4 (n'est pas différent de 4).
+
+
+//////// IF ----- ELSE /////////////////
+//si le parfum de la glace est du chocolat
+    //alors
+        //affiche une alerte qui contient "super j'adore le chocolat"
+    //SInon
+         // affiche une alerte " oh j'aurais preféré du chocolat"
+
+//--
+         //structure conditionnelle si(if)-sinon(else) remplie en fr
+   /* IF(condition){
+        alors
+          intruction 1 = affiche une alerte qui contient "super j'adore le chocolat"
+    }     
+    else{
+        instruction 2 = affiche une alerte " oh j'aurais preféré du chocolat"
+    }*/
+ 
+
+ //--   
+    //structure conditionnelle si(if)-sinon(else) remplie en JavaScript
+    var parfumGlace = prompt("fraise ou chocolat ?");
+    //var parfumGlace = "chocolat";
+
+    if(parfumGlace == 'chocolat'){
+        alert("super j'adore le chocolat")
+    }
+    else{
+        alert("oh j'aurais preféré du chocolat");
+    }
+    porteFermee = true;
+
+    if(porteFermee){
+        alert('ouvre la porte')
+    }
+
+    melon =false;
+    if (melon){
+        alert("je mange du melon");
+    }
+    else{
+        alert("je mange des chips");
+    }
+
+//structure conditionnelle  SI SINON-SI
+    //sinon j'ai du melon alors je mange du melon , 
+    //sinon si j'ai des chips alors je mange des chips ,
+    //sinon je ne mange rien.
+
+    var melon = false, chips = true;
+if(melon){
+    alert("je mange du melon");
+}
+else if(chips){
+    alert("je mange des chips");
+}
+else{
+    alert("je ne mange rien");
+}
+// structure conditionnelle et-ou
+// 1 = true || 0 = False
+var frigo = {
+    melon    : 0,
+    pasteque : 0,
+    parme    : 0,
+    fromage  : 0,
+    papaye   : 0
+};
+
+//si j'ai du melon et du jambon de parme
+//alors je mange du melon et du jambon de parme
+if(frigo.melon && frigo.parme){
+    alert("je mange du melon et du jambon de parme");
+    document.write("je mange du melon et du jambon de parme");
+}
+else if(frigo.fromage){
+    alert("je mange du fromage");
+    document.write("je mange du fromage");
+}
+
+else {
+    //sinon , si j'ai de la pasteque ou de la papaye
+    if(frigo.pasteque || frigo.papaye){
+        alert("je mange de la pasteque et/ou de la papaye");
+        document.write("je mange de la pasteque et/ou de la papaye");
+    }
+    else{
+        alert("je ne mange rien du tout et je peux aller crever");
+        document.write("je ne mange rien du tout et je peux aller crever");
+    }
+}
