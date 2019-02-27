@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>33 Fonctions imbriquées et closures</title>
+</head>
+<body>
+    <h1>Les fonctions imbriquées et closures</h1>
+    <p>ont peux appeler une fonctions depuis n'importe où meme si elle se trouve a l'interieure d'une autre fonctions</p>
+    <p>
+        les fonctions imbriquéessont souvent utiliser comme uin moyen de garder du code bien organisé. Une grande fonction complex est facile à comprendre si on la divise en plusieurs sous-fonctions.
+    </p>
+<pre>
+//Etape 1
+//on va créer une meta fonction qui imbrique plusieurs sous-fonctions
+
+        function maMetaFonction(){
+        var maVariable =1;
+
+        function sousFonction1();
+            sousFonction2();
+            sousFonction3();
+        }//fin de maMetaFonction
+
+    function sousFonctions1(){
+        document.write("maVariable");
+    }
+    function sousFonctions2() {
+        document.write("maVariable");
+    }
+    function sousFonctions3() {
+        document.write("maVariable");
+    }
+
+        //ici on declanche maMetaFunction
+        maMetaFunction();
+
+//il faut s'assurer que les valeurs utiliser dans la fonctions ont une portée correcte
+
+//ici il y une referenceError maVariable is not defined, En effet meme si la valeur de ma variable est definie dans la
+meme portée que les appele de fonctions, elle n'est pas definie dans les declarations de fonction (le code reel qui est
+executé lorsque le fonctions sont appelées).
+//pour que cela fonctionne il faut passer la valeur dans la fonction en tant que paramètre.
+
+
+
+
+</pre>
+
+    <script>
+        
+    //Etape 1    
+    //on va créer une meta fonction qui imbrique plusieurs sous-fonctions    
+        function maMetaFonction(){
+            var maVariable =1;
+
+            sousFonction1();
+            sousFonction2();
+            sousFonction3();
+        }//fin de maMetaFonction
+
+        function sousFonctions1(){
+            document.write("maVariable");
+        }
+        function sousFonctions2() {
+            document.write("maVariable");
+        }
+        function sousFonctions3() {
+            document.write("maVariable");
+        }
+
+        //ici on declanche maMetaFunction
+        maMetaFonction();
+
+        //il faut s'assurer que les valeurs utiliser dans la fonctions ont une portée correcte
+
+        //ici il y une referenceError maVariable is not defined, En effet meme si la valeur de ma variable est definie dans la meme portée que les  appele de fonctions, elle n'est pas definie dans les declarations de fonction (le code reel qui est executé lorsque le fonctions sont appelées).
+        //pour que cela fonctionne il faut passer la valeur dans la fonction en tant que paramètre.
+            
+    </script>
+    
+</body>
+</html>

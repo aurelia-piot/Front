@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>33 B Fonctions imbriquées et closures</title>
+</head>
+<body>
+    <h1>Les fonctions imbriquées et closures</h1>
+    <p>ont peux appeler une fonctions depuis n'importe où meme si elle se trouve a l'interieure d'une autre fonctions</p>
+    <p>
+        les fonctions imbriquéessont souvent utiliser comme uin moyen de garder du code bien organisé. Une grande fonction complex est facile à comprendre si on la divise en plusieurs sous-fonctions.
+    </p>
+<pre>
+
+//Etape 2
+//on va créer une meta fonction qui imbrique plusieurs sous-fonctions
+    function maMetaFonction(){
+        var maVariable = 1;
+
+        sousFonction1(maVariable);
+        sousFonction2(maVariable);
+        sousFonction3(maVariable);
+    }//fin de maMetaFonction
+
+    function sousFonction1(valeur){
+        document.write(valeur);
+    }
+    function sousFonction2(valeur) {
+        document.write(valeur);
+    }
+    function sousFonction3(valeur) {
+        document.write(valeur);
+    }
+
+//ici on declanche maMetaFunction
+
+maMetaFonction();
+
+//ici nous avons bien accès à la variable maVariable car ont a passer sa valeur dans la metaFunction et les
+sous-fonctions en tant que parametre.
+
+
+
+</pre>
+
+    <script>
+        
+    //Etape 2
+    //on va créer une meta fonction qui imbrique plusieurs sous-fonctions    
+        function maMetaFonction(){
+            var maVariable = 1;
+
+            sousFonction1(maVariable);
+            sousFonction2(maVariable);
+            sousFonction3(maVariable);
+        }//fin de maMetaFonction
+
+        function sousFonction1(valeur){
+            document.write(valeur);
+        }
+        function sousFonction2(valeur) {
+            document.write(valeur);
+        }
+        function sousFonction3(valeur) {
+            document.write(valeur);
+        }
+
+        //ici on declanche maMetaFunction
+        
+    maMetaFonction();
+    //ici nous avons bien accès à la variable maVariable car ont a passer sa valeur dans la metaFunction et les sous-fonctions en tant que parametre.    
+            
+    </script>
+    
+</body>
+</html>

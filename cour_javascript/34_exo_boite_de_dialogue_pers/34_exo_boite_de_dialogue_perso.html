@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>34 Boite de dialogue personnalisée</title>
+    <style>
+    
+    .msgbox{
+        background-color:silver ;
+        width: 242px;
+        /* height: 100px; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*position X et position Y*/
+    }
+    .msgbox p{
+        background-color:rgb(137, 241, 137); 
+        color: rgba(0, 0, 0, 0.692);
+        padding: 10px 20px;
+        line-height: 1.5;
+    }
+    .msgbox button{
+        background-color: rgb(253, 186, 186);
+        position: absolute;
+        top: .2rem;
+        right: .2rem;
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <button id="btnAfficheDialog">affiche la boite de dialogue</button>
+
+<!-- on retire la div du message car on va la generer dynamiquement en Javascript -->
+    <!-- 
+    <div class="msgbox">
+        <p>Message</p>
+        <button>X</button>
+    </div>
+     -->
+     <script>
+         
+         var btnOpenBox = document.getElementById("btnAfficheDialog");
+     
+
+
+
+    function afficheMessage(){
+        //dans une variable nommée body on selection la balise body dans le DOM
+
+        var body = document.querySelector("body");
+        
+        //dans une variable boiteDialogue on crée un objet div/p/button avec la methode createElement()
+
+        var boiteDialogue = document.createElement("div");
+        var pMessage = document.createElement("p");
+        //et ajouter a cet objet pMessage le contenut txt suivant :'je suis une boite de Dialogue ' avec la methode textContent.
+
+        var closeBtn = document.createElement("button");
+
+        pMessage.textContent = "je suis une boite de Dialogue ";
+        closeBtn.textContent = "X";
+        //on va ajouter cette boiteDialogue l'attribut class="msgbox" avec la méthode setAttribute('nom de l'attribut','nouvelle valeur').
+        //pour les 2 parametre attendus par setAttribute
+        //1-nom de l'attribut = class
+        //2- nouvelle valeur : le nom de la class = msgbox
+
+        boiteDialogue.setAttribute('class', 'msgbox');
+        body.appendChild(boiteDialogue);
+
+        boiteDialogue.appendChild(pMessage);
+        boiteDialogue.appendChild(closeBtn);
+        //on donne la div class="boiteDialogue" comme enfant a notre body
+       
+
+        
+
+        
+
+     }//fin de la fonction afficheMessage
+
+
+
+    
+     //ajouter a btnOpenBox un ecouteur d'evenement qui au click, declanche ma fonction afficheMessage
+     btnOpenBox.addEventListener("click", afficheMessage);
+         
+     
+     
+     
+     </script>
+</body>
+</html>
