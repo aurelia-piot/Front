@@ -1,0 +1,123 @@
+Les boucles
+Les instructions for et while qui sont deux type de boucles les plus utiliser en JS,
+    servent à repeter plusieur ligne de codes
+
+La boucle for<
+
+    For prend 3 parametres encadrés dans des parenthese suivis entre accolades des instructions a executer autant de fois que la boucle l'indique. le parametres sont :
+
+    --initialisation : declaration de la variables qui servira de compteur</li>
+    --condition: tant que cette boucle est vraie(true) la boucle s'executera
+    --Expression Final: expression qui est executée à chaque fin de boucle</li>
+
+
+
+    /*ici ces separer par des point-virgules et non des virgules*/
+
+    for(initialisation;condition; incrementation){
+        instruction 1;
+        instruction 2;
+        ect...;
+    }
+
+for(var i=0; i < 5 ; i++){
+    document.write(i+"<br>");
+    console.log(i)
+}
+ dans l'ordre : initialisation de la variable i egale à 0
+-tans que i est inférieur à 5, on execute la boucle
+//à a chaque fin de boucle on incremente i de 1 (i++)
+Ici, la boucle va s'executer 5 fois, quand la variable i aura comme valeur 0,1,2,3 et 4;
+a 5 la condition sera fausse et la boucle ne sera pas executer 
+
+//autres exemple de boucle
+tableau = ['chien','chat','souris','lapin','tortue'];
+
+//tableau.length nous permettra de recupérer le nombre d'elements que le tableau contient.
+//tableau.length = longueur du tableau
+
+for(var j=0;j<tableau.length;j++){
+    //affiche chacune des valeurs du tableau
+    document.write(tableau[j]+"<br>");
+}
+//autres exemple d'utilisation de for
+//convertir tous les objets d'un tableau en majuscule et les affichers
+
+var nom=[" fred "," marc "," habib "," samira "];
+var upper =[];
+
+// ici on a separer avec une virgule car on a 2 variables
+for(var k=0 , n = nom.length; k<n; k++){
+    upper[k] = nom[k].toUpperCase();
+}
+document.write(upper );
+
+//derniere boucle for
+for(var m = 0;m<10; m++ ){
+    alert('m contient la valeur :' + m);
+}
+
+
+////////////////////////////////////////////////
+            CERCLE & CANVAS
+            23_cercle_canvas.html
+
+var btn = document.querySelector('button');
+    var canvas =document.querySelector('canvas');
+
+    var feuille = canvas.getContext('2d')
+    //va nous permettre d'ecrire sur une feuille en 2d
+    
+    var WIDTH = document.documentElement.clientWidth;
+    var HEIGHT = document.documentElement.clientHeight;
+
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
+
+    function dessinUnCercle(){
+        feuille.clearRect(0,0, WIDTH, HEIGHT);
+        //efface le contenu du canvas
+        feuille.beginPath();
+        feuille.fillStyle = 'rgba(255,40,40,0.5)';
+
+        //dessine un cercle de 30px de diametre, positionné a 100px en X et 100px en Y de l'angle gauche du canvas
+        // feuille .arc(x,y, radius, startAngle, endAngle)
+        //start angle se situe a droite de l'arc, il doit etre reptété 2 fois pour former un cercle
+        feuille.arc( 100, 100, 30 , 0, 2*Math.PI);
+        //on va remplir le cercle
+        feuille.fill();
+    }
+    //parametre de addEventListener() :1 evenement /-2 action
+    //attention quand on veut declancher une fonction lors d'un evenement , ne surtout pas mettre de parenthes apres le nom de la fonction (sinon la fonction s'execute toute seule avant meme le click)
+
+    btn.addEventListener('click', dessinUnCercle);
+                
+          24_declancher_une_foction_au_click_du_bouton      
+                
+                ///// utilisation de l'aleatoir
+24_change_background_page.html
+
+
+ function random(number){
+     //Math.floor convertit en nombre entier (sans vvirgule) 
+     return Math.floor(Math.random()*number);
+     //ici on convertie en nombre entier le nombre randomnisé et le multiplié par la valeur de number (qui est l'argument donnée en entrée de la fonction)
+ }function dessinUnCercle(){
+        feuille.clearRect(0,0, WIDTH, HEIGHT);
+        //efface le contenu du canvas
+        feuille.beginPath();
+        feuille.fillStyle = 'hsla('+random(255)+', 89%, 48%, 0.5)';
+        
+
+        //dessine un cercle de 1px a 50px de diametre, positionné aleatoirement dans le canvas
+        // feuille .arc(x,y, radius, startAngle, endAngle)
+        //start angle se situe a droite de l'arc, il doit etre reptété 2 fois pour former un cercle
+        feuille.arc( random(WIDTH),random(HEIGHT), random(50) , 0, 2*Math.PI);
+        //on va remplir le cercle
+        feuille.fill();
+    }//Fin de la fonction dessinUnCercle
+
+    
+    //parametre de addEventListener() :1 evenement /-2 action
+    //attention quand on veut declancher une fonction lors d'un evenement , ne surtout pas mettre de parenthes apres le nom de la fonction (sinon la fonction s'execute toute seule avant meme le click)
+    btn.addEventListener('click', dessinUnCercle);

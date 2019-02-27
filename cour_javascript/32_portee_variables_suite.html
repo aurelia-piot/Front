@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>32 portée des variables</title>
+</head>
+<body>
+    
+<p>
+    on va créer 2 fonctions appelée a() et b() et trois variables qui seront les variables x, y et z, deux d'entre elles seront définit à l'intérieur de la fonction , et l'autre sera définie dans la portée globale.
+        on aura une 3eme fonction qui va appeler sortie() qui prend un seul parametre et qui le renvoie dans un paragraphe de la page. 
+</p>
+
+<pre>
+
+Etape 1
+
+la var x est dans la portée globale
+    var x=1;
+
+    function a(){
+      la var y et z sont dans les portées locales car elles sont dans les fonctions
+        var y =2
+    }
+
+    function b(){
+        var z=3;
+    }
+
+        declaration de la fonction sortie() qui attend un parametre
+    function sortie(valeur){
+
+        var para = document.createElement('p');
+      ici on créer le noeud (node) p qui est un objet du document
+
+        document.body.appendChild(para);
+      ici on ajoute ce noeud comme enfant de la balise body
+
+        para.textContent = "La valeur est: " +valeur;
+      créer le node de text qui est le contenue text de la balise p avec la methode textContent. (on pourra utiliser
+        innerHtml)
+    }
+
+        invocation de la fonction sortie en lui indiquant l'argument x
+    sortie(x);
+
+      il a créer un element paragraphe avec a l'interieur la valeur de x
+ICI la valeur est : 1 car x=1
+    comme x est dans la portée globale, on y a bien accés et donc le paragraphe créer par la fonction sortie affiche bien
+    la valeur 1 de x, vous devez normalement voir la valeur veritable x
+
+/////////////////
+    sortie(z);
+
+    renvoie a un message d'ereure de type ReferenceError : z is not defined, pourquoi ?
+    A cause la portée de fonction - y et z qui sont enfermées dans les fonctions a() et b(), donc la fonction sortie() ne peut pas les atteindre lorsqu'elles sont appeler despuis la portée globale.
+
+</pre>
+
+    <script>
+    
+    //Etape 1
+
+  //la var x est dans la portée globale   
+    var x=1;
+
+    function a(){
+      //la  var y et z sont dans les portées locales car elles sont dans les fonctions  
+        var y =2
+    }
+
+    function b(){
+        var z=3;
+    }
+    //declaration de la fonction sortie() qui attend un parametre
+    function sortie(valeur){
+        var para = document.createElement('p');
+        //ici on créer le noeud (node) p qui est un objet du document
+        document.body.appendChild(para);
+        //ici on ajoute ce noeud comme enfant de la balise body
+        para.textContent = "La valeur est: " +valeur;
+        //créer le node de text qui est le contenue text de la balise  p avec la methode textContent. (on pourra utiliser innerHtml)
+    }
+    //invocation de la fonction sortie en lui indiquant l'argument x
+    //sortie(x);
+    //comme x est dans la portée globale, on y a bien accés et donc le paragraphe créer par la fonction sortie affiche bien la valeur 1 de x, vous devez normalement voir la valeur veritable x
+
+    
+    </script>
+    <script></script>
+</body>
+</html>

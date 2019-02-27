@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>32 D portée des variables</title>
+</head>
+<body>
+    
+<p>
+    on va créer 2 fonctions appelée a() et b() et trois variables qui seront les variables x, y et z, deux d'entre elles seront définit à l'intérieur de la fonction , et l'autre sera définie dans la portée globale.
+        on aura une 3eme fonction qui va appeler sortie() qui prend un seul parametre et qui le renvoie dans un paragraphe de la page. 
+</p>
+<p>
+    que ce passe-t'il si les variables sont appelées de l'interieur d'une autre fonction ?
+</p>
+
+<pre>
+//Etape 4
+
+
+var x=1;
+
+    function a(){
+
+        var y =2
+        sortie(z);
+    }
+
+    function b(){
+        var z=3;
+        sortie(y);
+    }
+
+    function sortie(valeur){
+        var para = document.createElement('p');
+
+        document.body.appendChild(para);
+
+        para.textContent = "La valeur est: " + valeur;
+
+    }
+sortie(x);
+a();
+b();
+    ici l'appele de a () et b() renvois une erreur ReferenceError : z is not defined par ce que l'appele de la fonction sortie() et des variables qu'elle essaie d'afficher ne sont pas definie dans les
+    meme portées- les variables sont en effet invisible pour ces appeles de fonction.
+    
+    
+    le message d'ereure ReferenceError : z is not defined est l'un des plus courant que l'on puisse rencontré.
+    s'il s'affiche et que la variable en question est defini , verfier alors qu'elle est ça portée.
+    
+    les regles de portée ne s'appliquent , ni aux boucle ni aux instructions conditionnelles (if, else ect..)
+
+
+</pre>
+
+    <script>
+    
+    //Etape 4
+
+  
+    var x=1;
+
+    function a(){
+      
+        var y =2
+        sortie(z);
+    }
+
+    function b(){
+        var z=3;
+        sortie(y);
+    }
+    
+    function sortie(valeur){
+        var para = document.createElement('p');
+        
+        document.body.appendChild(para);
+       
+        para.textContent = "La valeur est: " +valeur;
+       
+    }
+    sortie(x);
+    a();
+    b();
+
+    //ici l'appele de a () et b() renvois une erreur ReferenceError : z is not defined
+    //par ce que l'appele de la fonction sortie() et des variables qu'elle essaie d'afficher ne sont pas definie dans les meme portées- les variables sont en effet invisible pour ces appeles de fonction.
+
+  
+//le message d'ereure ReferenceError : z is not defined est l'un des plus courant que l'on puisse rencontré.
+//s'il s'affiche et que la variable en question est defini , verfier alors qu'elle est ça portée.
+
+//les regles de portée ne s'appliquent , ni aux boucle ni aux instructions conditionnelles (if, else ect..)
+    
+    </script>
+    <script></script>
+</body>
+</html>

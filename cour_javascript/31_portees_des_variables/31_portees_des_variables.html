@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>31 Portées des variables</title>
+</head>
+<body>
+
+
+
+    <h1>La portée des fonctions et les conflits</h1>
+    <p>
+        La portée est un concepte tres important en javascript lorsque l'on a faire à des fonctions. <br>
+        quand on créer une fonction, les variables et autes chose qui sont definies à l'intérieur de la fonction ont leur propre portée, ce qui signifie qu'elle sont enfermée dans leur propre compartiment séparé et qu'elle ne peuvent pas être affécter par d'autre fonction ou par le code en dehors de la fonction
+         <br>
+        (metaphore du zoo, chaque animal a son propre enclos, la portée de la fonction)
+    </p>
+    <p>
+        le plus haut niveau en dehors de toute nos fonctions est appelé la portée globale. Les valeurs definie dans la portée global sont accessibles à partir de n'importe quelle partie du code (le gardient du zoo qui possede toute les clefs)
+    </p>
+
+    <p>
+        Le Javascrpit est construit de cett façon pour plusieurs raisons et en particulier pour la sécurité et l'organisation
+        <br>
+        Parfois, vous ne noulez pas que vos variables soient accessible depuis toutes les autre parties du codes - des scriptes externes appelés depuis l'extérieur de votre fonction pourraient interferrer avec votre code et causer des problemes par ce qu'il utilisent les meme nom de variables que d'autres parties du code, provoquant des conflits. Peut etre fait par malveillance ou par accident.
+    </p>
+    
+    <p>
+        par exemple on va avoir  un fichier Html qui appelle 2 fichiers Javascript externes, et que les deux ont une variables et une fonction definie qui utilise le meme nom.
+    </p>
+
+
+<script src="31_scripts1.js"></script>
+<script src="31_scripts2.js"></script>
+<script>
+
+document.write("ici on invoque la fonction ditSalut() qui peut etre aussi bien definie dans un script interne que dans un script externe .<br>");
+
+document.write("ce sont les parenthèses qui executent la fonction.<br>")
+
+ditSalut()
+</script>
+</body>
+</html>

@@ -7,37 +7,238 @@
     <title>corriger</title>
 
     <style>
+    *{
+        box-sizing: border-box;
+    }    
+    html{
+        font-size: 62.5%; /*10 px*/
+    }
+    body{
+        background:royalblue ;
+        font:1.4rem/1.2 arial, helvetica, sans-serif;
+        /*font-size/line-height font-family*/
+        margin: 0;
+
+    }
+    .container{
+        margin: 0 auto;
+        background:orange ;
+        width: 80%;
+        border:2px solid black;
+        padding: 1rem;
+
+    }
+    h1{
+        text-align: center;
+        display: block;
+        color:steelblue ;
+        text-shadow:2px 2px  rgb(33, 35, 36);
+
+
+    }
+    img{
+        display: block;/*car initialement l'image est un element inline, est la rendent en element block on peut la centrer dans notre div*/
+        margin: 0 auto;
+    }
     
     
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Mozilla est cool !</h1>
-<img src="" alt="">
-<p>
 
+    <div class="container">
+    
+        <h1>Mozilla est cool !</h1>
+
+        <img src="images/logo_firefox_1.png" alt="...">
+<p>
+    Mozilla, nous somme une communauté globale
 </p>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Techologists</li>
+    <li>Thinkers</li>
+    <li>Builders</li>
 </ul>
 <p>
-
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id officia nulla porro quo non. Aliquid nulla placeat totam excepturi neque quisquam maiores iure, ex fuga culpa inventore dolores ab rem?
 </p>
-<p>
-    <a href=""></a>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum dolorum officia veniam libero modi id soluta, similique debitis 
+    <a href="#">Mozilla Manifesto</a>
+    earum molestias ducimus neque accusantium ullam amet corporis fugit velit quam at?
+    
 </p>
-<button></button>
+<button>Changer d'utilisateur</button>
     </div>
     
     
     
     
     <script>
-    
-    
+    alert("OK!");
+        //la fonction qui va changer/switcher l'image lorsque l'on clique dessus
+        //ici on stocke dans la variable monImage la premiere image du document (car query.Selector('img') semectionnera la premiere image du html)
+        //sinon on utilise querySelectorAll('img')[0]; pour selectionner une image en particuliere en  precisant l'enfant n°dans les crochets "[]"
+        var monImage = document.querySelector('img');
+        console.log(monImage);//pour voir dans la console
+        
+        //on ajoute un ecouteur d'evenement (addEventListener) pour ajouter un ecouteur de "click" sur l'image
+        //addEventListener attend 2 parametre 
+        //1- l'evenement (click)
+        // ,
+        //2- l'action a realiser apres l'evenement (changer la source de l'image )
+        monImage.addEventListener("click",function(){
+            //on recupere dans une variable maSrc, la valeur actuelle de l'attribut src de monImage. On va utiliser la méthose getAttribute(), l'argument attendu pour cette methode est le nom d'un autre attribut de balise html (ici ça sera src)
+            //alert('click');//alert et le console.log sont ici pour verifier si l'addEventListener fonctionne
+        var maSrc = monImage.getAttribute('src'); 
+        
+        console.log(maSrc) 
+
+        //SI (la valeur de la varirable maSrc est egal à "images/logo_firefox1.png"(source de l'image 1))
+          //alors
+             //alert ("je suis l'image 1")
+          //sinon
+             //alert("ma src n'est pas l'image 1")
+
+    // premiere version de cette condition pour tester
+
+   /* if(condition){
+        instruction 1;
+    }
+    else{
+        instuction 2;
+    }*/
+
+    // if(maSrc === 'images/logo_firefox_1.png'){
+    //     alert("je suis l'image 1, ma source est "+ maSrc);
+
+    // }
+    // else{
+    //     alert("je ne suis pas l'image 1 ,ma source est "+ maSrc);
+
+    // }   
+
+    //seconde version : ici on va intervertir les images avec la methode setAttribute qui attend 2 arguments
+    //1 - attribut ciblé (ici se sera src)
+    // 2: sa nouvelle valeur (ici ça sera images/logo_firefox_2.png)
+    //on veut remplacer la source de la 1er image par la source de la 2eme image
+
+        if(maSrc === 'images/logo_firefox_1.png'){
+        //alert("je suis l'image 1, ma source est "+ maSrc);
+        monImage.setAttribute('src','images/logo_firefox_2.png');
+
+    }
+    //ensuite on veut remplacer la source de la 2eme image par la source de la 1ere image
+    else{
+        //alert("je ne suis pas l'image 1 ,ma source est "+ maSrc);
+        monImage.setAttribute('src', 'images/logo_firefox_1.png');
+
+
+    }   
+
+        
+
+});
+/*Dans le code precedent on a fait:
+1/ on click sur l'image (dans la fonction addEventListener)
+2/ on a utilisé la structure conditionnelle  if else pour voir si la valeur de l'attribut  src est egal au chemin de l'image originale
+3/ si c'est le cas , on change la valeur de cet attribut en lui indiquant le chemin vers la seconde image
+4/ si ce n'est pas le cas (ce qui signnifie que l'image a ete changée), la valeur de l'attribut src revient a ca valeur initiale
+*/
+
+///////////////////////////////////////
+
+// Prochaine fonction : ajouter un message d'accueil personalisé , on va changer le titre de la page pour inclure un message pour le visiteur du site, Ce message sera conserver quand l'utilisateur quittera le site et si il y revient  plus tard.
+//on va conserver ce message dans le cache du navigateur en utilisant l'API webstorage
+
+//au final, on ajoutera une option sur le bouton ,pour pouvoir changer d'utilisateur et le message d'accueil si besoin.
+
+
+//1ere etape : recupere dans une variable monTitre le 1er h1 du document et l'afficher en console
+
+
+
+var monTitre = document.querySelector('h1');
+console.log(monTitre);
+
+//2eme etape : recupere dans une variable monbouton le 1er bouton du document et l'afficher en console
+
+var monBouton = document.querySelector('button');
+console.log(monBouton);
+
+//preparer la fonction du message d'accueil ( qui sera invoquer/declencher/executer plus tard)
+
+function definirNomUtilisateur(){
+    var monNom = prompt('votre nom pls');
+    localStorage.setItem("nomUtilisateur",monNom);
+    //permet de stocker le nom de l'utilisateur dans le cache du navigateur (grace a  localStorage (qui est une API) et .setItem("nomUtilisateur",monNom); qui créer ça propre variable (nomUtilisateur)a partire de notre variable js "monNom").
+    monTitre.textContent= "Bienvenue "+monNom;
+
+}
+// ensuite 
+//tester si le nom est deja dans le cache,
+// si il n'y est pas , on demande avec un prompte le nom de l'utilisateur (declanche la fonction 'definirNomUtilisateur')
+//et si le nom est deja dans le cache, on le recupère et on l'affiche dans le titre
+
+// pour tester: vider le localStorage
+//localStorage.clear();
+
+//test du nom dans le cache
+if(!localStorage.getItem('nomUtilisateur')){
+    alert('le cache est vide')
+    definirNomUtilisateur();
+    //si le cache est vide; on demande son nom
+}
+else{
+    //si il a son nom, on le recupere
+    var nomEnrengistre = localStorage.getItem('nomUtilisateur');
+    monTitre.textContent="Bienvenue à nouveau "+ nomEnrengistre;
+
+}
+
+
+
+ //ensuite - au click sur le bouton , invoquer la fonction definirNomUtilisateur 
+ /*monBouton.addEventListener('click',definirNomUtilisateur());*/
+ monBouton.addEventListener('click',function(){
+     definirNomUtilisateur();
+ 
+
+ })
+
+
+
+ /*explication de la fonction
+ cette fonction utilise la methode prompte qui affiche une boite de dialogue, un peu comme une alert(), sauf qu'elle permet a l'utilisateur de saisir des données et de les enrengister dans une variable quand l'utilisateur click sur OK
+
+ Dans notre exemple on demande a l'utilisateur de saisir son nom
+ ensuite nous appelons L'API localStrorage qui permet de stocker des donnée dans le navigateur pour pouvoir le reutiliser ulterieurment
+ Nous utilisons la fonction setItem de cet API pour stocker la donnée qui nous intérresse dans un conteneur appelé nomUtilisateur. La valeur stockée ici est la valeur de la variable monNom qui contient le nom saisie par l'utilisateur dans le prompte.
+
+ au final on utilise la propriete textContent du titre pour lui affecter un nouveau contenu.
+
+*/
+/*
+le block de la conditionnel if else utilise l'operateur de negation 'Not' = '!' pour verifier si le navigateur possede une donnée enrengistrée appelée nomUtilisateur ou pas.
+sinon , la fonction definirNomUtilisateur est invoquer pour créer cette donnée.
+
+si elle existe ( au caus ou l'utilisateur est deja venus sur la page,) on la recupere avec la methode getItem()
+
+pour finir on definit le contenu de textContent pour le titre avec une concaténation de chaine suivie du nom de l'utilisateur.
+
+Enfin , on associe le gestionnaire d'evenement 'click' au bouton.
+
+quand l'utilisateur cliquera sur le bouton , ça declenchera l'execution de la fonction definirNomUtilisateur();
+
+Ce bouton permet donc a l'utilisateur de modifer son nom si il le souhaite.
+
+
+
+
+
+
+ */
+
+
     
     </script>
 </body>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>32 C portée des variables</title>
+</head>
+<body>
+    
+<p>
+    on va créer 2 fonctions appelée a() et b() et trois variables qui seront les variables x, y et z, deux d'entre elles seront définit à l'intérieur de la fonction , et l'autre sera définie dans la portée globale.
+        on aura une 3eme fonction qui va appeler sortie() qui prend un seul parametre et qui le renvoie dans un paragraphe de la page. 
+</p>
+<p>
+    que ce passe-t'il si les variables sont appelées de l'interieur d'une autre fonction ?
+</p>
+
+<pre>
+//Etape 3
+
+
+var x=1;
+
+    function a(){
+
+        var y =2
+        sortie(x);
+    }
+
+    function b(){
+        var z=3;
+        sortie(z);
+    }
+
+    function sortie(valeur){
+        var para = document.createElement('p');
+
+        document.body.appendChild(para);
+
+        para.textContent = "La valeur est: " + valeur;
+
+    }
+sortie(x);
+a();
+b();
+
+les 2 fonctiions a() et b() renvoie la valeur de x car la variable x est dans la portée globale et est donc disponible dans tout le code 
+
+la fonction sortie() est elle meme disponible n'importe où dans le code, car elle est definie de la portée globale 
+
+</pre>
+
+    <script>
+    
+    //Etape 3
+
+  
+    var x=1;
+
+    function a(){
+      
+        var y =2
+        sortie(x);
+    }
+
+    function b(){
+        var z=3;
+        sortie(x);
+    }
+    
+    function sortie(valeur){
+        var para = document.createElement('p');
+        
+        document.body.appendChild(para);
+       
+        para.textContent = "La valeur est: " +valeur;
+       
+    }
+    sortie(x);
+    a();
+    b();
+
+  //les 2 fonctiions a() et b() renvoie la valeur de x car la variable x est dans la portée globale et est donc disponible dans tout le code
+
+    //la fonction sortie() est elle meme disponible n'importe où dans le code, car elle est definie de la portée globale 
+    
+    </script>
+    <script></script>
+</body>
+</html>

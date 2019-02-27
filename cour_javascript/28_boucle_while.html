@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Les boucles for et While (suite)</h1>
+    <p>
+        elles servent à répéter une ou plusieurs lignes de codes
+    </p>
+    <h2>
+        Laboucle while en Javascripte (Répéter TANT QUE)
+    </h2>
+    <p>
+        definit une liste d'istruction à éxécuter <strong>tant qu'une condition est vraie</strong> 
+    </p>
+    <strong>STRUCTURE DE LA BOUCLE WHILE</strong>
+    <pre>
+        while (condition){
+            instruction 1;
+            instruction 2;
+            ect...;
+        }
+    </pre>
+    <pre>
+        var x=0;
+        
+        
+        TANT QUE x est inferrieur à 20, on entre dans la boucle et on realise l'instruction ajoute 5 a x
+        while( x < 20 ) { 
+            x +=5 
+            ajoute 5 à la valeur x 
+        }
+    </pre>
+    <script>
+    
+    var x=0;
+    //TANT QUE x est inferrieur à 20, on entre dans la boucle et on realise l'instruction ajoute 5 a x
+    while(x<20){
+        x+=5 //ajoute 5 à la valeur x
+        document.write(x + " " + "<br>");
+       
+    }
+     document.write("si on affiche  le document quand on est dans la bouble.il s'affichera la valeur de x à chaque tour de boucle" + "<br>");
+    document.write(x + "<br>");
+    document.write("ici on affiche la valeur final apres que la boucle à été executer donc on obtien 20" + "<br><br>");
+    
+
+
+    document.write("While ne prend qu'un seul parametre : la condition à vérifier (Tant que x < 20).Tant qu'elle est vraie, la boucle continue de s'executer.<br><br>Ici ,la boucle sera executer 5 fois et x aura comme valeur final 20 . <br><br> La boucle while se répète tant que la condition est validée .ça veut dire qu'il faut s'arranger à un moment pour que la condition ne soit plus vraie, sinon la boucle se repeterait à l'infini (et on plante le navigateur...");
+
+
+    </script>
+</body>
+</html>
