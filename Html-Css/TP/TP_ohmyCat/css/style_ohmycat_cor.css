@@ -1,0 +1,90 @@
+
+
+.container-fluid{
+    padding: 0 ;
+    
+}
+h1 ,h2 ,h3 ,h4,h5{
+    font-family: 'Merienda', cursive;
+}
+h1 , h4{
+    padding-top: 10px;
+}
+h1{
+    color: white;
+    margin: 15px auto;
+    text-align: center;
+
+}
+h3{
+    color: #2F4073;
+}
+
+header {
+    /* background:brown ; */
+    height: 10rem;
+    background: url('../img/background.jpg');
+}
+
+nav{
+    background:  #061339;
+    color: white;
+    
+}
+nav p{
+    margin-top: 5px;
+    margin-bottom: 8px;
+    
+}
+form{
+    padding-top: 20px;
+}
+#form h4{
+    padding-top:20px;
+}
+
+
+#slide{
+    /* background: rgb(87, 60, 87); */
+    /* height: 5rem; */
+}
+
+.btn{
+    margin-top:5%;
+}
+
+
+
+#form{
+    /* background: rgb(19, 224, 19); */
+    /* height: 5rem; */
+}
+#logo{
+    background: #dedede;
+}
+#chat img{
+    background: #7885A5;
+    height:100%;
+    width:100%;
+}
+
+#chat img:hover{
+    background:#061339;
+}
+
+#txt{
+    padding-top: 2%;
+    background: #dedede;
+    /* height: 5rem; */
+}
+
+footer {
+    background:#061339 ;
+    
+}
+footer p{
+    text-align: right;
+    color: white;
+    padding-right: 15px;
+
+}

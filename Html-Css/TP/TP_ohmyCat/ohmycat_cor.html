@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ohMyCat Cor</title>
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <!--CSS Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+<!-- CSS Perso -->
+    <link rel="stylesheet" href="css/style_ohmycat_cor.css">
+</head>
+<body>
+
+<div class="container-fluid"><!-- avec la class="container-fluid" pour que la boite prenne tout l'espace dispo -->
+
+    
+    <!--      **********            HEADER     **************        -->
+<header > 
+    <!-- je declare une ligne BS (bootstrap) -->
+    <div class="row">
+            <!-- avec la class col, BS va occuper l'espace dont l'element a besoin, Par conséquent si je ne met qu'un element, celui-ci va occuper les 12 colonnes BS, 
+            Par contre, si J'ajoute plusieurs elements dans la class col, BS va répartir les colones selon l'espace nécéssaire pour chaque élément   -->
+            <div class="col ">
+
+               <nav>
+                   <div class="row">
+                       <div class="col-md-4 offset-md-3">
+                           <!-- la class offset me permet de decaler l'emplacement de mon element. Contrairement a la class order, la class offset n'agit pas sur la reorganisation des elements (mais décale simplement mon element dans les 12 colones données) -->
+                           <p> OhMyCat !</p>
+                           
+                       </div>
+                   </div>
+                </nav>
+                   <h1>Adoptez un chat trop bon !</h1>
+               
+            </div>
+
+            
+
+    </div>
+
+</header>
+ <!--      **********            MAIN       **************        -->
+<main>
+<!--                                 part 1                             -->
+    <!-- Dans le cas présent, nous avons déclaré deux sections afin de leur attribuer des bg différents -->
+       <section id="formSlide">
+           <!-- la class container me permet de centrer les elements  -->
+           <div class="container">
+               <div class="row">
+<!-- la class col-md-9 me permet de definir le nombre de colonne que je vais attribuer à mon element. 
+avec la class order-md-4 je force le BS à positionner l'élement à partir de la 4 eme colonne -->
+                    <div class="col-md-9 order-md-4" id="slide">
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/chat_1.jpg" class="d-block w-100" alt="Sushi">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Sushi</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/chat_2.jpg" class="d-block w-100" alt="Maki">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Maki</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/chat_3.jpg" class="d-block w-100" alt="Sashimi">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Sashimi</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/chat_4.jpg" class="d-block w-100" alt="Yakitori">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    <h5>Yakitori</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/chat_5.jpg" class="d-block w-100" alt="Onigri">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    <h5>Onigri</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+
+                        <!-- 1.2 -->
+                    </div>
+                    <div class="col-md-3 order-md-1" id="form">
+                        <h4>Les chats à adopter</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Choix du chat</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>-- Selectionnez --</option>
+                                    <option>Sushi</option>
+                                    <option>Maki</option>
+                                    <option>Sashimi </option>
+                                    <option>Yakitori</option>
+                                    <option>Onigri</option>
+                                </select>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Raisons d'adoption </label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Pour quelles raisons voulez-vous adopter un chat ?</textarea>
+                                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+               </div>
+           </div>
+       </section>
+
+ <!--                               part 2                          -->
+
+    <section id="logo">
+        <div class="container">
+            <div class="row">
+            
+               <!-- .row>.col-md-9+.col-md-3  -->
+                <div class="col-md-9" id="txt">
+                    <h2>Nos chats à adopter...</h2>
+                    <p>Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego idem antea multa
+                    decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem pertinerent? Supplicationem quindecim
+                    dierum decrevi sententia mea. Rei publicae satis erat tot dierum quot C. Mario ; dis immortalibus non erat exigua eadem
+                    gratulatio quae ex maximis bellis. Ergo ille cumulus dierum hominis est dignitati tributus.
+                    
+                    Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus, ne
+                    exspectemus quidem, dum rogemur; studium semper adsit, cunctatio absit; consilium vero dare audeamus libere. Plurimum
+                    in amicitia amicorum bene suadentium valeat auctoritas, eaque et adhibeatur ad monendum non modo aperte sed etiam
+                    acriter, si res postulabit, et adhibitae pareatur.</p>
+            
+                </div>
+                <!--                                     2.2                   -->
+                <div class="col-md-3" id="chat">
+                    <img src="img/tete-chat.png" alt="logo tete de chat">
+            
+                </div>
+            
+        </div>
+        </div>
+    </section>
+    
+   
+    
+</main>
+<!-- //////////////////////////////////// FOOTER //////////////////////////////// -->
+<footer>
+<p>@OhMyCat</p>
+    
+
+</footer>
+</div>
+    
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
