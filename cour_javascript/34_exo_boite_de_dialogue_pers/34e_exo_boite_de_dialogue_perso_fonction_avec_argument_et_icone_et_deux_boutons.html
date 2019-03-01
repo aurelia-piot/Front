@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>34e Boite de dialogue personnalisée</title>
+    <style>
+        body{
+            background: rgb(143, 95, 95);
+        }
+    
+    .msgbox{
+        /* background-color:rgb(172, 11, 11) ; */
+        width: 242px;
+        /* height: 100px; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*position X et position Y*/
+    }
+
+
+
+    .msgbox p {
+        /* background-color:rgb(137, 241, 137);  */
+        color: rgba(12, 5, 5, 0.692);
+        /* padding: 10px 20px; */
+        padding: 5px 55px;
+        line-height: 1.5;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        
+    }
+    .msgbox button , .msgChat button{
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: .2rem;
+        right: .2rem;
+    }
+    .icone{
+        top:50%;
+        left:17%;
+        transform:translate(-50%, -50%); 
+        position: absolute;
+
+        
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <button id="btnAfficheWarning">affiche la boite warning</button>
+    <button id="btnAfficheChat">affiche la boite warning</button>
+    <button id="btnAfficheBug">affiche un bug</button>
+    
+
+<!-- on retire la div du message car on va la generer dynamiquement en Javascript -->
+    <!-- 
+    <div class="msgbox">
+        <p>Message</p>
+        <button>X</button>
+    </div>
+     -->
+     <script>
+         
+         var btnOpenBoxWarning = document.getElementById("btnAfficheWarning");
+         var btnOpenBoxChat = document.getElementById("btnAfficheChat");
+        var btnOpenBoxBug = document.getElementById("btnAfficheBug");
+        
+     
+
+
+
+  
+
+
+     function afficheDialogue(msgText, msgType) {
+            
+
+            var body = document.querySelector("body");
+
+
+            
+
+            var boiteDialogue = document.createElement("div");
+            var pMessage = document.createElement("p");
+            
+
+            var closeBtn = document.createElement("button");
+
+            pMessage.textContent = msgText;
+            closeBtn.textContent = "X";
+
+            boiteDialogue.style.backgroundColor = "rgb(172, 11, 11)";
+
+
+           
+
+            boiteDialogue.setAttribute('class', 'msgbox');
+
+            body.appendChild(boiteDialogue);
+
+            boiteDialogue.appendChild(pMessage);
+            boiteDialogue.appendChild(closeBtn);
+
+            
+
+            if (msgType === 'chat') {
+              
+                boiteDialogue.style.backgroundColor = " rgb(180, 180, 4)";
+                pMessage.style.backgroundImage = "url(images/chat.png) ";
+               
+
+            }
+
+
+
+            else if (msgType === 'warning') {
+                //alert("warning");
+                boiteDialogue.style.backgroundColor = "darkred";
+                pMessage.style.color = 'white';
+                pMessage.style.backgroundImage = "url(images/warning.png) ";
+
+
+                
+            }
+
+            else {
+                alert('Bug');
+            }
+
+
+
+            closeBtn.addEventListener("click", function () {
+                boiteDialogue.parentNode.removeChild(boiteDialogue);
+            })
+
+
+
+        }//fin de la fonction afficheMessage
+
+
+     /* Si le msgType a la valeur 'chat' alors l'icone chat sera afficher comme backgroundimage du message et la couleur d'arriere plan de la boite de dialogue sera bleu*/
+     /*sinon si le msgtype a la valeur 'warning' alors l'icone warning sera afficher comme backgroundimage du message et la couleur d'arriere plan de la boite de dialogue sera rouge*/
+
+
+
+
+       
+     //ajouter a btnOpenBox un ecouteur d'evenement qui au click, declanche ma fonction afficheMessage
+        
+        //  btnOpenBox.addEventListener("click", afficheMessage('Le nouveau text de la boite'));
+     
+     //les parenthese qui suivent afficheMessage declenche imediatement la fonction sans attendre le click
+     //pour eviter cela, on va faire une seconde verson si dessous
+    
+     btnOpenBoxWarning.addEventListener("click",function() {
+         afficheDialogue('attention ', 'warning');
+         
+     });
+
+    
+    btnOpenBoxChat.addEventListener("click", function () {
+            afficheDialogue('Chalut', 'chat');
+        });
+    
+    btnOpenBoxBug.addEventListener("click", function () {
+            afficheDialogue('Bug', '0');
+        });    
+        //si nous voulon specifier des parametres pour la fonction que nous appelons (function afficheMessage)
+        //nous ne pouvons pas l'invoquer directement car sinon elle se declencherais d'elle meme
+        //nous avons donc besoin de la metre a l'interieur d'une fonction anonyme (elle n'est pas dans la portée immediate et n'est donc pas appelée immediatement )
+        //donc elle ne sera pas appeler tant que le bouton ne sera pas appeler  
+     
+    //  SI 
+        //le msgType a la valeur 'warning', alors l'icone warning sera affichée commme BG-image dumsg, et le panel prendra la couleur d'arriere plan rouge.
+    //Sinon SI
+        //le msgType à la valeur 'chat', alors l'icone chat sera afficher et le panel prendra la couleur d'arriere plan bleu turquoi
+    //Sinon 
+        //le parametre msgtype n'a pas de valeur du tout, alors le paragraphe prendra un padding par defaut et il n'y aura ni icone, ni couleur d'arriere plan
+    
+    //etape 1
+        //construiser les IF avec les instructions suivantes.
+        //Alors
+        //on affiche alert('attention');
+        //Sinon Si (le msgType a la valeur 'chat')
+        //Alors
+        //on affiche alert('chat');
+
+    //etape2 
+     
+     </script>
+</body>
+</html>

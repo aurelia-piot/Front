@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03</title>
+</head>
+<style>
+article{
+    width:200px ;
+    padding: 20px;
+    background: rgb(145, 255, 111);
+}
+
+
+
+
+</style>
+<body>
+   
+    <article>
+        Contenu de l'article.   
+    </article>
+
+   <p class="resultat"> 
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, incidunt dolore. Fugiat nihil eaque molestias ab amet, modi, ipsa sapiente, itaque provident quos dicta architecto. Eos itaque unde voluptate mollitia.
+   </p> 
+    
+    
+    
+
+
+
+
+    <!-- on charge la librairie jquery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            console.log('jquery est bien chargé');
+        })//fin du scope jquery
+        
+    //selectionner la balise article avec le selecteur css : article
+    $('article').on('click',function(){
+        //action qui se fera au clique sur l'article
+        //alert('article');
+//tout ce qu'on veut faire au clic sur l'article, this c'est l'article qui est cliqué
+        $(this).css("background-color","indianred");
+
+    })
+    $('.resultat').on('click', function(){
+        $(this).css("color","green");
+    })
+    
+    
+    
+    
+    
+
+    
+    
+    
+    </script>
+</body>
+</html>

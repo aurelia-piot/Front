@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Charger jquery</title>
+</head>
+<body>
+    
+
+<!-- on charge la librairie jquery                              -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    
+    
+  /*  //methode traditionnelle pour tester que le DOM soit bien chargés 
+    document.addEventListener("DOMContentLoaded",function(){
+        //tout le code js de la page sera ici
+        console.log("DOM chargé");
+
+    })*/
+
+    /* //-Methode JQuery pour tester que le DOM soit bien charger
+    
+    $(document).ready( function(){
+        //ici ont aura tout les codes JS et JQUery de la page ic 
+        //on est dans ce que l'on appele le scope Jquery
+    })//fin du document.ready*/
+
+     //2em methode(conseiller) pour charger jquery et le DOM
+    
+    $(function(){
+        //ici on est dans ce que l'on appele le scope Jquery
+        //ici ont aura tout les codes JS et JQUery de la page ici 
+       console.log("le DOM et JQuery sont bien chargés");
+        
+    })//fin du scope jquery
+    
+    </script>
+</body>
+</html>
