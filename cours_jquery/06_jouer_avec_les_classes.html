@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .tailleTextex2{
+        font-size: 2em;
+    }
+    .couleurFond{
+        background: olivedrab;
+    }
+    .carre{
+        width: 200px;
+        height: 200px;
+        background-color: forestgreen;
+        margin-top: 50px;
+        text-align: center;
+        transition: 0.2s;
+        
+    }
+    .tourne{
+        background-color: gold;
+        transform: rotate(.5turn)scale(0.5);  /*scale = mise a l'echelle , 0.5=-50%*/
+        
+    }
+ 
+    </style>
+</head>
+<body>
+    
+
+
+<strong>
+  Je suis gras
+</strong>
+<br>
+<em>
+    je suis en Italic
+</em>
+<br>
+<u>
+    je suis du text souligné
+</u>
+<br>
+
+<button>
+    retire la class
+</button>
+<br>
+<div class="carre">
+    contenu de carré
+</div>
+
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+        console.log("ok");
+
+        //selectionner la balise "u" et lui  donner la class .tailltextex2 avec la methode jquery .addClass
+        $("u").addClass("tailleTextex2");
+       
+       
+        //quand on clic sur la balise "em" on ajoute la class "couleurFond" a la balise "strong"
+                 $("em").on("click",function(){
+                   $('strong').addClass('couleurFond');
+                 })
+
+        //fonction /action qui retire la class  stocké dans la var retireClass       
+        var retireClass =function(){
+            $('u').removeClass();
+        }         
+        
+        //quand on clic sur le bouton , la class tailleTextex2 et retiré de "u"
+        $("button").on("click",retireClass);
+
+        //creation d'une fonction tourneCarre qui sera executer au clic sur le carre, cette fonction ajoute au clic la class "tourne" au carré et la retire si on clic a nouveau avec "toggleClass" 
+        //toggleClass agit comme un interrupteur en ajoutant et enlevent une class
+        var tourneCarre = function(){
+            $(this).toggleClass('tourne');
+        }
+        $('.carre').on('click',tourneCarre);
+
+
+
+
+
+        
+    })//fin du scope jquery
+    
+    
+</script>
+</body>
+</html>

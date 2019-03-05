@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+        border:2px solid darkred;
+        width: 70%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .lienActif{
+        font-weight: bold; 
+    }
+    
+    
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="colLeft">
+            <!-- contenu de colGauche -->
+                <h2 class="titleSite"><a href="#"> wf3 / Pole S</a> </h2>
+                <p>Lorem ipsum <a href="ressource.pdf" target="blank">les ressources du cours</a> dolor sit amet consectetur, adipisicing elit. Illo a culpa iure optio non. Libero, a.</p>
+                <p>ssumenda molestias recusandae necessitatibus adipisci laborum distinctio amet placeat, molestiae harum esse architecto dicta porro</p>
+        
+        </div>
+
+        <div class="colRight">
+            <!-- contenu de colDroite -->
+                <h2 class="titleChapter">cours JQuery</h2>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, magni error at itaque omnis sint placeat recusandae inventore necessitatibus officia exercitationem alias, pariatur impedit. Dolore incidunt repellat at illum quod.</p>
+                <form action="#">
+                    <input type="date">
+                    <input type="submit" >
+                </form>
+        
+        </div>
+
+    </div><!-- fin du .container -->
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+
+$(function(){
+    console.log("ok");
+/*pour selectionner avec jquery la div avec la class="container"
+    $(".container") || $("div.container") 
+
+
+pour mettre dans une variable monElement les elements qui ont la class="container"
+
+var monElement = $('.container');
+
+pour selectioner tout les enfant/descendant direct 
+monElement.children()
+console.log(monElement.children());
+// ici on aura bien la présence de div.colLeft et div.colRight
+
+console.log(monElement.children('.colLeft'));
+selectionne parmis les enfants de .container , celuis qui a la class="colLeft"
+
+
+console.log(monElement.children().eq(1)); 
+selectionne dans la liste des enfants de .container , le deuxieme de la liste (car on commence a compter a partir de zero pour une liste)
+ici la console renvoie l'objet div.colRight
+
+
+ console.log(monElement.children().find('h2'));
+    selectionne tous les h2 parmi tous les descendants
+
+
+   var monPara =$('p.para');//renvoi le paragraphe qui a la class="para"
+   
+   monPara.next();//renvoie le voisin suivant de para qui est donc le form
+   
+   console.log(monPara.next().next());//renvois a un objet jQuery vide car il n'y a rien apres le form
+   
+   monPara.prev();//renvoie le voisin precedant de para qui est donc le titre h2.titleChapter
+
+//pour savoir combiens y a t'il de lien dans la page
+   console.log($('a').length);//renvois "1" car on a que  un seul lien dans la page
+      
+      //pour savoir combiens il y a d'element h2 avec la class="titleChapter"  dans la page
+console.log($('h2.titleChapter').length);
+
+
+//pour savoir combien d'element "a" dont l'attribut href est egale a "#"
+    console.log($("a[href='#']").length);
+
+
+//pour savoir combien d'element "a" dont l'attribut href ce termine par .pdf
+    console.log($("a[href $= '.pdf']").length);
+    
+    //au chargement de la page ce lien sera rouge
+    $("a[href $= '.pdf']").css("color", "gold");
+
+    //au survole sur le liens , faire un toggleClass (.lienActif) pour changer sa couleur
+        //plus simple a faire en Css par contre.
+
+    $("a[href $= '.pdf']").hover(function(){
+        $(this).toggleClass('lienActif')
+    });
+
+*/
+
+
+/*
+var monElement = $('.container');
+console.log(monElement.children());
+console.log(monElement.children('.colLeft'));
+console.log(monElement.children().eq(1));
+console.log(monElement.children().find('h2'));
+   
+   var monPara =$('p.para');//renvoi le paragraphe qui a la class="para"
+   monPara.next();//renvoie le voisin suivant de para qui est donc le form
+   monPara.prev();//renvoie le voisin precedant de para qui est donc le titre h2.titleChapter
+    monPara.parent();// renvois le parent de p.para qui sont la div.colRight
+    console.log(monPara.next().next());//renvois a un objet jQuery vide car il n'y a rien apres le form
+//pour savoir combiens y a t'il de lien dans la page
+    console.log($('a').length);//renvois "1" car on a que  un seul lien dans la page
+
+    //pour savoir combiens il y a d'element h2 avec la class="titleChapter"  dans la page
+console.log($('h2.titleChapter').length);
+
+
+
+*/
+
+    //pour savoir combien d'element "a" dont l'attribut href est egale a "#"
+    console.log($("a[href='#']").length);
+
+
+//pour savoir combien d'element "a" dont l'attribut href ce termine par .pdf
+    console.log($("a[href $= '.pdf']").length);
+    //au chargement de la page ce lien sera rouge
+    $("a[href $= '.pdf']").css("color", "gold");
+
+    //au survole sur le liens , faire un toggleClass (.lienActif) pour changer sa couleur 
+
+
+    $("a[href $= '.pdf']").hover(function(){
+        $(this).toggleClass('lienActif')
+    });
+
+})//fin du scope jquery
+
+
+
+</script>
+</body>
+</html>

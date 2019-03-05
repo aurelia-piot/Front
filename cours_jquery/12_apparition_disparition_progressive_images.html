@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>12</title>
+
+<style>
+
+img{
+    width: 320px;
+}
+
+
+</style>
+
+</head>
+<body> 
+    
+    <button class="btnDisparrait">hide</button>
+
+    <button class="btnAparrait">show</button>
+    <p>
+
+        <img src="images/s1.jpg" alt="s1">
+        <img src="images/s2.jpg" alt="s2">
+        <!-- <img src="images/s3.jpg" alt="s3"> -->
+        <img src="images/s4.jpg" alt="s4">
+        <img src="images/s5.jpg" alt="s5">
+
+
+
+    </p>
+
+   
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('ok');
+
+        $('.btnDisparrait').click(function(){
+            $('img').first().hide('slow', function hideNextOne(){
+                $(this).next('img').hide('slow', hideNextOne)
+            })
+
+
+
+
+
+        })//fin du click hide
+
+$('.btnAparrait').click(function(){
+            $('img').first().show('slow', function showNextOne(){
+                $(this).next('img').show('slow', showNextOne)
+            })
+
+
+
+
+
+        })//fin du click show
+
+
+
+
+
+
+
+
+
+
+
+        })///fin du scope
+
+
+
+    </script>
+</body>
+</html>

@@ -105,6 +105,7 @@ resumer: body = margin 8px
    -ABSOLUTE???
    (peut etre placer librement par rapport a un ancetre positionner avec "position")
    il sort du flux.
+   transforme l'element en element block.
 
     ////////////////////////////////////////////////////
                         FLEX

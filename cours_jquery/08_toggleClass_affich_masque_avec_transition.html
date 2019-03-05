@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08</title>
+<style>
+.listeFruits{
+    
+    transform: scale(0);/*pour cacher la liste au chargement de la page en lui appliquant une mise a l'echelle de 0 (donc nul)*/
+    transition: .4s;
+   background: rgba(51, 255, 0, 0.336);
+   transform-origin: 0 50%; /*pour changer son point de tranformation ( 0 0 pour le placer en haut a gauche)*/
+
+}
+.affiche{
+    transform: scale(1);/*pour motrer la liste au clic du bouton en lui appliquant une mise a l'echelle de 1 (qui est ça taille de base)*/
+}
+</style>
+</head>
+<body>
+
+<button class='btn'>
+    clic
+</button>
+    
+<ul class=" listeFruits">
+    <li>pomme</li>
+    <li>poire</li>
+    <li>banane</li>
+    <li>fraise</li>
+</ul>
+
+
+    
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+
+$(function(){
+    console.log('ok');
+
+
+
+//ici on ajoute un evenement 'click' sur notre bouton ('.btn') et on execute une fonction anonyme
+
+ $('.btn').on('click', function(){
+     //on ajoute un toggleClass pour ajouter et supprimer la class 'affiche' sur l'objet qui a la class 'listeFruits'
+        $(".listeFruits").toggleClass("affiche");
+    });
+
+ 
+ 
+
+ 
+   
+
+
+})
+
+
+</script>
+</body>
+</html>
