@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>cour Jquery</title>
     <style>
     body{
         background-color: rgb(179, 209, 233);
@@ -141,6 +141,53 @@
     <li>eq() renvoie parmi une liste d'elements celui qui se trouve à l'index fourni (indiquer)</li>
 
 </ul>
+<h2>Les getters et les setters , ajouter et retirer des classes et savoirs si on a déjàs des classes</h2>
+<ul>
+    <li>addClass(): ajoute une class</li>
+    <li>removeClass() : retire une class </li>
+    <li>toggleClass() : interrupteur ajoute/retire une class </li>
+    <li>hasClass() : tester l'existance d'une class </li>
+    <li>is() : tester si on a plusieurs class </li>
+</ul>
+
+<h2>Les evenements</h2>
+<p>
+    la plupart des interaction de l'utilisateur avec la page web peuvent etre interceptée et une action peut etre lancée en retour
+</p>
+<p>
+    on peut dire a une fonction de s'executer quand l'utilisateur clic sur un bouton ou bien quand il scrolls la fenetre ou bienencor quand il appuis sur une touche du clavier
+</p>
+<ul>
+    <li>mouse(souris): click : au clic sur l'evenement</li>
+    <li>moseenter : lorsque la sourie passe par dessus la zonne de l'element</li>
+    <li>mouseleave : lorsque la souris sort de cette zone</li>
+    <li></li>
+    <li>keyboard (le clavier) <br>
+        keydown : lorsqu'une touche de clavier est enfoncée <br>
+        keyup : lorsqu'une touche de clavier est relachée <br> </li>
+    <li>
+        window(la fenetre du navigateur) <br>
+        scroll : defilement de la fenêtre <br>
+        resize : redimensionnement de la fenêtre <br>
+    </li>    
+    <li>
+        form(formulaires) <br>
+        change : charge les elements &lt;input&gt; ,&lt;select&gt; et &lt;textarea&gt; , quand l'utilisateur change une de leurs valeurs <br>
+        focus et blur : lorsque la souris est dans l'input ou sort de l'input <br>
+        submit : à l'envoi du formulaire        
+    </li>
+    <li>
+        document (le contenu DOM) <br>
+        DOMcontentLoaded : lancé lorsque le document HTML est complétement chargé et analysé sans attendre que les images et le Css soient aussi chargés.
+
+    </li>
+
+</ul>
+<p>exemple <br>
+$('&lt;p&gt;').append('bonjour '+ $('#prenom').val()).appendTo(".info");
+    // $('&lt;p&gt;') pour creer une balise "p" avec/append('string...').appendto/dans(".info")
+
+</p>
 
 </body>
 </html>

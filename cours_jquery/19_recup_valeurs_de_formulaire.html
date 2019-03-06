@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19</title>
+    <style>
+    .info{
+        background: rgb(61, 194, 255);
+        
+    }
+    .info p{
+        padding: 2px 15px;
+    }
+    form{
+        background: rgba(44, 104, 119, 0.479);
+
+    }
+    
+    </style>
+</head>
+<body>
+   
+    <form action="#" id="monForm">
+        <fieldset>
+                <legend>
+                    infos pro
+                </legend>
+            <label for="prenom">ton prénom:</label>
+            <input type="text" id="prenom">
+                <br>
+            <label for="motDePasse">mot de passe:</label>
+            <input type="password"id="motDePasse">
+            <br>
+            <label for="date">le date du rendez-vous:</label>
+            <input type="date" id="date">
+            <br>
+            <strong>Genre :</strong>
+            <label for="homme">homme</label>
+            <input type="radio" id="homme" value="homme" name="genre">
+            <label for="femme">femme</label>
+            <input type="radio"id="femme" value="femme" name="genre">
+            <label for="neutre">neutre</label>
+            <input type="radio" id="neutre" value="neutre" name="genre">
+            <br>
+             
+            <label for="statut">ton statut :</label>
+        <select name="statut" id="statut">
+
+            <option value="etudiant">etudiant</option>
+            <option value="employer">employé.e</option>
+            <option value="retraiter">retraité.e</option>
+            <option value="sansemplois">sans emplois</option>
+
+
+        </select>
+        <p>choix de couleurs</p>
+<p>
+    <input type="checkbox" name="couleurs" id="violet" checked>
+    <label for="violet">violet</label>
+</p>
+<p>
+    <input type="checkbox" name="couleurs" id="orange" >
+    <label for="orange">orange</label>
+</p>
+
+<input type="reset" id="annuler" value="annuler">
+<input type="submit" id="envoyer" value="envoyer">
+
+
+
+        </fieldset>
+    </form>
+<div class="info ">
+
+</div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(function () {
+            console.log('ok');
+
+
+//recupere le prenom de l'utilisateur
+//lire le prenom entré dans l'input qui a id="prenom" et l'afficher en console
+// console.log($('#prenom').val());
+//créer l'evenement on submite et stopper la redirection
+$('#monForm').on('submit',function(ev){
+    //pour stopper la redirection on va intercepter l'evenement, Attention pour cela a bien indiquer le parametre ev dans les parenthese de la fonction : function(ev)
+    ev.preventDefault();
+    console.log($('#prenom').val()); //lit et affiche le prénom de l'utilisateur
+    console.log($('#motDePasse').val());//lit et affiche le mot de passe de l'utilisateur
+    console.log($('#statut').val());//lit et affiche le statut selectionner par l'utilisateur
+    console.log($(':radio:checked').val());//lit l'etat du boutton radio affiche le genre selectionner par l'utilisateur
+
+
+  //a ne pas faire 
+   /* $('#prenom').val('Michel')//ecrit michel dans la zone de text prenom
+    $(':radio').val(['homme'])//selection le bouton radio homme*/
+
+    //créer une balise p , la remplir avec la string 'bonjour' concaténée avec la valeur de l'input #prenom
+    //et ajouter cette balise a Body
+
+    $('<p>').append('bonjour '+ $('#prenom').val()).appendTo(".info");
+    // $('<p>') pour creer une balise "p" avec dedans/append('string...').appendto/dans(".info")
+
+    //a faire tout seul : créer un p par valeur d'input du form
+    $('<p>').append('ton mdp est : ' + $('#motDePasse').val()).appendTo(".info");
+    $('<p>').append('ton RDV est le ' + $('#date').val()).appendTo(".info");
+    $('<p>').append('tu es ' + $('#statut').val()).appendTo(".info");
+    $('<p>').append('et tu es ' + $(':radio:checked').val()).appendTo(".info");
+    /*$('<p>').append('tu aime la couleur ' + $([type='checkbox'].checked)).appendTo(".info");*/
+
+
+
+
+
+
+
+
+
+
+
+
+})//fin de l'event submit
+
+        })//fin du scope
+
+
+
+
+    </script>
+</body>
+</html>

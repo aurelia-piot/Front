@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>18</title>
+    <style>
+    
+    
+    </style>
+</head>
+<body>
+   <p>
+       faire un form avec: <br> un menu deroulant (balise select) qui contient plusieurs options d'animaux.(un animal par option) <br>
+
+   </p>
+    <form action="#">
+        <label for="animaux">Sélectionne ton animal préféré.e</label>
+        <select name="animaux" id="animaux">
+
+            <option value="chien">chien</option>
+            <option value="chat">chat</option>
+            <option value="hiboux">hiboux</option>
+            <option value="python">python</option>
+            <option value="gecko">gecko</option>
+            <option value="corneil">corneil</option>
+
+
+        </select>
+    </form>
+    <p class="info"></p>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(function () {
+            console.log('ok');
+//l'eve,nement change survient quand l'utilisateur choisit une nouvelle  option dans la liste deroulante
+$('select#animaux').change(function(){
+    $(".info").html('tu viens de selectionner ton animal préféré '+$(this).val());
+    //.val() permet de recuperer la valeur de this , donc de l'option selectionner dans le formulaire
+})
+
+
+
+
+
+
+
+
+
+
+
+
+        })//fin du scope
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%; /*base 1rem=10px*/
+    }
+    body, input, textarea{
+        font: 1.4rem/1.5 arial,helvetica, sans-serif;
+    }
+    #monForm{
+        margin: 0 auto;
+        width: 50%;
+        background: rgb(110, 206, 235);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+    #monForm fieldset{
+        
+        border: 1px solid rgb(11, 35, 70);   
+        border-radius: .5rem;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    }
+    #monForm fieldset legend{
+        background-color:rgb(197, 234, 255) ;
+        color: rgb(10, 68, 95);
+        padding: 1rem;
+        border-radius: .5rem;
+        
+    }
+    #monForm input,#monForm textarea{
+        width: 100%;
+        margin: 5px 0;
+    }
+     #monForm p{
+         margin-top: .5rem;
+         margin-bottom: 0;
+     }
+    
+    </style>
+</head>
+<body>
+   
+    <form action="machin.php" method="GET" id="monForm">
+        <fieldset>
+            <legend>mes infos perso</legend>
+        <p>
+          <label for="nomComplet">Nom et Prénom</label>
+          <input type="text" name="" id="nomComplet"placeholder =" Nom et Prénom">
+        </p>
+        
+        
+        <!-- créer un input pour l'email, le telephone, sujet-->
+        <p>
+            <label for="email">Email</label>
+        
+        <input type="email" name="email" id=" email" placeholder="email">
+        </p>
+        <p>
+            <label for="tel">n° Telephone</label>
+            <input type="tel" name="tel" id=" tel" placeholder="n° Telephone">
+        </p>
+        <p>
+            <label for="objet">objet</label>
+            <input type="text" name="objet" id=" objet" placeholder="objet">
+        </p>
+        
+        
+        <!-- créer un textaera avec l'id="message" -->
+        
+        
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea>
+        
+        <!-- créer un btn submit et reset -->
+        <input type="reset" id="annuler" value="annuler">
+        <input type="submit" id="envoyer" value="envoyer mon message">
+        
+        
+        
+        </fieldset>
+
+
+
+    </form>
+
+<div class="info"></div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(function () {
+            console.log('ok');
+              //ecouter l'evenemnt submit du formulaire
+            $('#monForm').on('submit', function(ev) {
+                //stopper la redirection du formulaire
+                ev.preventDefault();
+                    //créer un balise "p" par input ajouter a la balise body
+                $('<p>').append("tu te nommes :"  +  $('#nomComplet').val() +",  Email  :" + $('#email').val()+", numero de telephone:" + $('#tel').val()).appendTo("body");
+                $('<p>').append("tu te nommes :" + $('#nomComplet').val()).appendTo("body");
+                $('<p>').append("Email :" + $('#email').val()).appendTo("body");
+              var nomComplet =$('nomComplet').val();
+              $(this).replaceWith(
+                  //attention apostrophes inversées : alt gr + 7
+                  `
+                  <p class="feedback">
+                    bonjour <strong>  ${nomComplet}   </strong>
+
+
+
+                  </p>
+                  
+                  
+                  
+                  `
+              )
+
+            })//fin event submit
+        })//fin du scope
+
+
+
+
+    </script>
+</body>
+</html>
