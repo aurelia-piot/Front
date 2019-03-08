@@ -1,0 +1,124 @@
+
+
+/* reset */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5% /*base 10px*/
+}
+body{
+    font: 1.4rem/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+    background: rgb(142, 161, 136);
+}
+header{
+    position: relative;
+    background:url(../images/dinosaure.jpg) no-repeat 50% -170px ;
+    background-size: 100% auto;
+    height: 800px;
+    color: white;   
+}
+
+
+
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    line-height: 5; /* 2 x16 */
+    
+
+}
+nav ul{
+    
+    display: flex;
+    justify-content: space-around;
+    /*ou aussi space-between*/
+}
+
+nav ul li a{
+    color: white;
+    
+    
+}
+header{
+    position: relative;
+    background:url(../images/dinosaure.jpg) no-repeat 50% -170px ;
+    background-size: 100% auto;
+    height: 800px;
+    color: white;   
+}
+
+
+
+.wrapper{
+    width:80%;
+    max-width: 1000px;;
+    margin: 0 auto;
+    padding: 1px;
+    /* le border a ete remplacer par un padding pour palier au probleme des marges des enfants qui debordent des parent et qui deplace tout*/
+}
+
+
+/*------------------------contenu de Header-------------------------*/
+
+.logo-jurassic{
+    display: block;
+    margin: 100px auto;
+    width: 50%;
+}
+.bandeau{
+    position: absolute;
+    /* bien metre le header en position relative*/
+    
+    right:0;
+    bottom: 0px;
+}
+/*------------------------contenu du Main-------------------------*/
+
+h1{
+    text-transform: uppercase;
+}
+main section{
+    padding-top: 5rem;
+    border: 2px solid blue;
+    margin: 0 auto;
+}
+
+.presentation{
+    width: 70%;
+}
+.entree_parc{
+    
+    width: 100%;
+    
+}
+/*****************************************/
+
+.partenaires img{
+    display: block;
+    margin: auto auto;
+    width: 80px;
+}
+
+iframe{
+    width: 100%;
+}
+
+/*--------FOOTER------------*/
+
+footer{
+    
+    background: rgb(10, 12, 15);
+}
+footer .mention-legales{
+    color: white;
+}
+footer .wrapper{
+    padding-top: 10rem;
+}

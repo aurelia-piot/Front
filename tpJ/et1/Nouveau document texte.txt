@@ -1,0 +1,58 @@
+/* reset */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5% /*base 10px*/
+}
+body{
+    font: 1.4rem/1.5 arial, helvetica, sans-serif;
+}
+
+
+
+
+
+nav{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    height:20px;
+    width: 100%
+
+}
+nav ul{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    color: white;
+    
+}
+header{
+    
+    background: black;
+
+    height: 200px;
+    color: white;   
+    
+
+}
+
+
+
+.wrapper{
+    width:80%;
+    max-width: 900px;;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+
+footer{
+    height: 200px;
+    background: rgb(10, 12, 15);
+
+}

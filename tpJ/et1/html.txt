@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP Jurassic</title>
+
+    <link rel="stylesheet" href="css/tp_jp_style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">L'EXPOSITION</a>
+                </li>
+                <li>
+                    <a href="#">INFO PRATIQUES</a>
+                </li>
+                <li>
+                    <a href="#">FAG</a>
+                </li>
+                <li>
+                    <a href="#">AVIS</a>
+                </li>
+                <li>
+                    <a href="#">PRESSE</a>
+                </li>
+                <li>
+                    <a href="#">FR</a>
+                    |
+                    <a href="#">EN</a>
+                </li>
+                <li>
+                    <button> BILLETTERIE</button>
+                </li>
+            </ul>
+
+        </nav>
+
+
+
+        <div class="logo-jurassic"></div>
+        <div class="bandeau"></div>
+
+    </header>
+    <!-- //////////////////       Main         ////////// -->
+    <main class="wrapper">
+        
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="mention-legales"></div>
+        <div class="logo-footer"></div>
+
+    </footer>
+
+    <div class="wrapper">
+        <div class="mention">
+
+        </div>
+
+        <a href="#"></a>
+
+
+</body>
+
+</html>

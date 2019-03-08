@@ -1,0 +1,189 @@
+/* html{
+    font-size: 62.5% /*base 1rem=10px
+} 
+*/
+/* body{
+    font: 1.4rem/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+} */
+
+
+body{
+    background-color: rgb(255, 255, 255); 
+}
+/* /////////////////////////////////////////////////////////////////// */
+header{
+    position: relative;
+    background: url("../images/background.jpg")no-repeat 50% , 30%;
+    height: 800px;
+    
+}
+.text-center{
+    text-align: center;
+}
+
+
+header .nav_btn{
+    position:absolute;
+    right: .5%;
+    top: 100%;
+   
+}
+.navCache{
+ margin-top: 45px;
+
+}
+
+header #id_haut {
+    text-align: center
+}
+
+
+header h1 , header .p{
+    text-align: center;
+    color: white;
+}
+
+
+
+.form-case {
+    padding: 5px;
+}
+.form-bottom{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.527);
+    border-radius: 5px;
+}
+
+.btn-green{
+    background: rgba(0, 128, 0, 0.562);
+}
+.form_btn{
+    margin: 0;
+}
+
+
+/* /////////////////////////////////////////////////////////////////// */
+.div_haut{
+    position: relative;
+    width: 70%;
+     margin: 0 auto;
+     height: 40px;
+}
+
+#btnDrop{
+    position: absolute;
+    right: 0;
+    padding: 5px 13px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+/*-----------------------------------------------*/
+.div_0{
+    border-bottom:1px solid silver;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: auto;
+    position: relative;
+}
+.carousel img{
+    
+    width: 100px;
+}
+
+.btnleft{
+    
+    background: black;
+    position: absolute;
+    top:100px;
+    left: 40px;
+    border-top: 20px solid white;
+     border-bottom: 20px solid white;
+  
+     border-right: 20px solid rgb(0, 0, 0);
+}
+
+/*******----------------------------------------*/
+.image1{
+    background: url('../images/vehicule1.png');
+    width: 350px;
+    height: 200px;
+    display: block;
+    margin: 35px auto;
+}
+.image2{
+    background: url('../images/vehicule2.png');
+    width: 350px;
+    height: 200px;
+    display: block;
+    margin: 35px auto;
+}
+.image3{
+    background: url('../images/vehicule3.png');
+    width: 350px;
+    height: 200px;
+    display: block;
+    margin: 35px auto;
+}
+.image4{
+    background: url('../images/vehicule4.png');
+    width: 350px;
+    height: 200px;
+    display: block;
+    margin: 35px auto;
+}
+/*----------------------------------------------------*/
+
+.btnright{
+    
+    background: black;
+    position: absolute;
+    top:100px;
+    right: 40px;
+    width: 0; 
+  height: 0; 
+  border-top: 20px solid white;
+  border-bottom: 20px solid white;
+  
+  border-left: 20px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------*/
+.text-droite{
+    margin-top: 4%;
+}
+.text-droite .btn{
+    background:linear-gradient(0deg,rgb(33, 116, 33), rgb(69, 224, 69));
+    border-radius:5px;
+    color: white;
+    
+
+}
+/* /////////////////////////////////////////////////////////////////// */
+.div_bas{
+width: 20%;
+margin: 20px auto;
+
+} 
+.div_bas img{
+   
+    width:100%
+}
+.div_bas p{
+    font-size: 10pt;
+line-height: 15px;
+margin: 4px;
+}

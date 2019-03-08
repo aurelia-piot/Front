@@ -114,8 +114,26 @@ $('#monForm').on('submit',function(ev){
     $('<p>').append('et tu es ' + $(':radio:checked').val()).appendTo(".info");
     /*$('<p>').append('tu aime la couleur ' + $([type='checkbox'].checked)).appendTo(".info");*/
 
+//affiche les couleurs cochées par l'utilisateur
+//Closur ' pour accéder aux variables en local
+function couleurs(){
+    var couleurs = [];
 
+    return function(){
+        $("input[type='checkbox']:checked").each(
+            //.each = pour chacun
+            function(){
+                couleurs.push(" "+$(this).attr("id"));
+                console.log(couleurs);
 
+            }
+        )//fin each
+        $('<p>').append("tu as choisi les couleurs suivantes"+ couleurs).appendTo('.info');
+    }
+}
+
+var ajoutCouleurs = couleurs();
+ajoutCouleurs();
 
 
 
