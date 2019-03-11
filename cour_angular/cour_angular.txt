@@ -1,0 +1,46 @@
+                                COUR ANGULAR
+                                ************
+
+
+Angular Js =/= Angular
+
+angular Js est framework JavaScript !
+Libre et open source développé par Google. Il permet de développer des pages web.
+il permet de fournir un cadre de travail pour travailer et etre plus productif
+angular utilise le type source. 
+framework 100% client.
+Ajax permet de mettre a jour une partie de la page sans devoir la recharger entierment.
+(asynchronous JavaScript and XML)
+
+(transpilation)
+comme tout les navigateurs ne comprennent que le Html-Css et le Js ,
+pour pouvoir utiliser le typeScript ou autre langage on fait de la transpilation.
+
+
+Ionic(/Cordova ) permet de convertir des appli web sur d'autre plateforme (mobile)
+
+Node package manager (NPM) 
+Node.js est un framework qui permet de faire tourner le js coter serveur 
+
+////////////-------------------------------------------------------------
+
+https://angular.io/tutorial
+
+
+////////////------------------------------------------------------------
+
+   Welcome to {{ title }}!
+    <!-- {{title}} une façon d'ecrire d'angular -->
+
+
+<router-outlet></router-outlet>
+<!-- router-outlet == balise propre a angular -->
+
+
+
+module/ regroupement de plusieurs/différents composants (boite a outils ..ect)
+
+typeScript on declare les variable avec
+"const" ou "let"
+
+ici les class servent a créer des objets
